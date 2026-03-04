@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="--" target-language="--" datatype="plaintext" original="ng2.template">
+        <header>
+            <tool tool-id="localizely.com" tool-name="Localizely"/>
+        </header>
+        <body>
+            <trans-unit id="Node">
+                <source>Index</source>
+                <target>Index</target>
+            </trans-unit>
+            <trans-unit id="🔗 add Income">
+                <source>15.0</source>
+                <target>15.0</target>
+            </trans-unit>
+            <trans-unit id="add  expense">
+                <source>19.0</source>
+                <target>19.0</target>
+            </trans-unit>
+            <trans-unit id="create envelope">
+                <source>15.0</source>
+                <target>15.0</target>
+            </trans-unit>
+            <trans-unit id="Each envelope">
+                <source>16.0</source>
+                <target>16.0</target>
+            </trans-unit>
+            <trans-unit id="🔗 on track envelopes ">
+                <source>30.0</source>
+                <target>30.0</target>
+            </trans-unit>
+            <trans-unit id="Edit envelope">
+                <source>15.0</source>
+                <target>15.0</target>
+            </trans-unit>
+            <trans-unit id="Each Expense">
+                <source>20.0</source>
+                <target>20.0</target>
+            </trans-unit>
+            <trans-unit id="categories ">
+                <source>36.0</source>
+                <target>36.0</target>
+            </trans-unit>
+            <trans-unit id="🔗 Goals">
+                <source>24.0</source>
+                <target>24.0</target>
+            </trans-unit>
+            <trans-unit id="Completed Goals down">
+                <source>25.0</source>
+                <target>25.0</target>
+            </trans-unit>
+            <trans-unit id="Goals">
+                <source>25.0</source>
+                <target>25.0</target>
+            </trans-unit>
+            <trans-unit id="Goal details">
+                <source>11.0</source>
+                <target>11.0</target>
+            </trans-unit>
+            <trans-unit id="Edit Goal ">
+                <source>18.0</source>
+                <target>18.0</target>
+            </trans-unit>
+            <trans-unit id="delete goal">
+                <source>16.0</source>
+                <target>16.0</target>
+            </trans-unit>
+            <trans-unit id="select category">
+                <source>36.0</source>
+                <target>36.0</target>
+            </trans-unit>
+            <trans-unit id="set income">
+                <source>19.0</source>
+                <target>19.0</target>
+            </trans-unit>
+            <trans-unit id="set Budget">
+                <source>12.0</source>
+                <target>12.0</target>
+            </trans-unit>
+            <trans-unit id="🔗 Transactions  expense">
+                <source>20.0</source>
+                <target>20.0</target>
+            </trans-unit>
+            <trans-unit id="🔗  Transactions Income">
+                <source>49.0</source>
+                <target>49.0</target>
+            </trans-unit>
+            <trans-unit id="each Income transaction">
+                <source>16.0</source>
+                <target>16.0</target>
+            </trans-unit>
+            <trans-unit id="edit Income transaction">
+                <source>15.0</source>
+                <target>15.0</target>
+            </trans-unit>
+            <trans-unit id="Edit expense">
+                <source>19.0</source>
+                <target>19.0</target>
+            </trans-unit>
+            <trans-unit id="higher budget ">
+                <source>12.0</source>
+                <target>12.0</target>
+            </trans-unit>
+            <trans-unit id="delete income Transaction">
+                <source>19.0</source>
+                <target>19.0</target>
+            </trans-unit>
+            <trans-unit id="Delete envelope">
+                <source>20.0</source>
+                <target>20.0</target>
+            </trans-unit>
+            <trans-unit id="Notifications ">
+                <source>26.0</source>
+                <target>26.0</target>
+            </trans-unit>
+            <trans-unit id="no Notifications ">
+                <source>5.0</source>
+                <target>5.0</target>
+            </trans-unit>
+            <trans-unit id="Insights">
+                <source>26.0</source>
+                <target>26.0</target>
+            </trans-unit>
+            <trans-unit id="🔗  home page">
+                <source>31.0</source>
+                <target>31.0</target>
+            </trans-unit>
+            <trans-unit id="Analytic report">
+                <source>23.0</source>
+                <target>23.0</target>
+            </trans-unit>
+            <trans-unit id="Over spending">
+                <source>17.0</source>
+                <target>17.0</target>
+            </trans-unit>
+            <trans-unit id="Edit  budget">
+                <source>34.0</source>
+                <target>34.0</target>
+            </trans-unit>
+            <trans-unit id="edit savings">
+                <source>33.0</source>
+                <target>33.0</target>
+            </trans-unit>
+            <trans-unit id="settings">
+                <source>20.0</source>
+                <target>20.0</target>
+            </trans-unit>
+            <trans-unit id="set savings">
+                <source>13.0</source>
+                <target>13.0</target>
+            </trans-unit>
+            <trans-unit id="delete expense">
+                <source>23.0</source>
+                <target>23.0</target>
+            </trans-unit>
+            <trans-unit id="create new category ">
+                <source>41.0</source>
+                <target>41.0</target>
+            </trans-unit>
+            <trans-unit id="🔗 savings">
+                <source>24.0</source>
+                <target>24.0</target>
+            </trans-unit>
+            <trans-unit id="allocate goalsavings">
+                <source>35.0</source>
+                <target>35.0</target>
+            </trans-unit>
+            <trans-unit id="Transactions  expense">
+                <source>24.0</source>
+                <target>24.0</target>
+            </trans-unit>
+            <trans-unit id="Transactions Income">
+                <source>15.0</source>
+                <target>15.0</target>
+            </trans-unit>
+            <trans-unit id="on track envelopes ">
+                <source>25.0</source>
+                <target>25.0</target>
+            </trans-unit>
+            <trans-unit id="log out">
+                <source>24.0</source>
+                <target>24.0</target>
+            </trans-unit>
+            <trans-unit id="change income d 1">
+                <source>19.0</source>
+                <target>19.0</target>
+            </trans-unit>
+            <trans-unit id="change income d 2">
+                <source>19.0</source>
+                <target>19.0</target>
+            </trans-unit>
+            <trans-unit id="dialog-message">
+                <source>3.0</source>
+                <target>3.0</target>
+            </trans-unit>
+            <trans-unit id="Profile settings">
+                <source>6.0</source>
+                <target>6.0</target>
+            </trans-unit>
+            <trans-unit id="edit Profile settings">
+                <source>13.0</source>
+                <target>13.0</target>
+            </trans-unit>
+            <trans-unit id="add money">
+                <source>12.0</source>
+                <target>12.0</target>
+            </trans-unit>
+            <trans-unit id="help centre">
+                <source>9.0</source>
+                <target>9.0</target>
+            </trans-unit>
+            <trans-unit id="reset password ">
+                <source>8.0</source>
+                <target>8.0</target>
+            </trans-unit>
+            <trans-unit id="Verify code">
+                <source>7.0</source>
+                <target>7.0</target>
+            </trans-unit>
+            <trans-unit id="spalsh 2">
+                <source>3.0</source>
+                <target>3.0</target>
+            </trans-unit>
+            <trans-unit id="spalsh 3">
+                <source>3.0</source>
+                <target>3.0</target>
+            </trans-unit>
+            <trans-unit id="spalsh 4">
+                <source>3.0</source>
+                <target>3.0</target>
+            </trans-unit>
+            <trans-unit id="spalsh 5">
+                <source>3.0</source>
+                <target>3.0</target>
+            </trans-unit>
+            <trans-unit id="spalsh 6">
+                <source>3.0</source>
+                <target>3.0</target>
+            </trans-unit>
+            <trans-unit id="onboarding 1">
+                <source>3.0</source>
+                <target>3.0</target>
+            </trans-unit>
+            <trans-unit id="onboarding 7">
+                <source>3.0</source>
+                <target>3.0</target>
+            </trans-unit>
+            <trans-unit id="onboarding 8">
+                <source>3.0</source>
+                <target>3.0</target>
+            </trans-unit>
+            <trans-unit id="onboarding 9">
+                <source>3.0</source>
+                <target>3.0</target>
+            </trans-unit>
+            <trans-unit id="onboarding 10">
+                <source>3.0</source>
+                <target>3.0</target>
+            </trans-unit>
+            <trans-unit id="onboarding 11">
+                <source>5.0</source>
+                <target>5.0</target>
+            </trans-unit>
+            <trans-unit id="create account ">
+                <source>17.0</source>
+                <target>17.0</target>
+            </trans-unit>
+            <trans-unit id="sign in">
+                <source>13.0</source>
+                <target>13.0</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
