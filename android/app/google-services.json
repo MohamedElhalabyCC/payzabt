@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "156052898802",
+    "project_id": "payzabt",
+    "storage_bucket": "payzabt.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156052898802:android:2f5672f9faab8b62d3616b",
+        "android_client_info": {
+          "package_name": "com.cloud_continuum.payzabt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZxgcTTnlPOYs29a5C9w56yu9ILhHaeDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

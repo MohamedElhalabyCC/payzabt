@@ -7,7 +7,7 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:payzabt/config/export/export.dart';
-import 'package:payzabt/core/app/health_and_beauty.dart';
+import 'package:payzabt/core/app/payzabt.dart';
 
 
 void main() {

@@ -1,5 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:payzabt/core/app/health_and_beauty.dart';
+import 'package:payzabt/core/app/payzabt.dart';
 
 import 'config/export/export.dart';
 import 'core/app/main_inits.dart';

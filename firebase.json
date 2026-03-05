@@ -1,0 +1,21 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "payzabt",
+                    "appId": "1:156052898802:android:2f5672f9faab8b62d3616b",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "payzabt",
+                    "configurations": {
+                        "android": "1:156052898802:android:2f5672f9faab8b62d3616b"
+                    }
+                }
+            }
+        }
+    }
+}
