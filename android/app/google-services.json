@@ -23,6 +23,44 @@
           "other_platform_oauth_client": []
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156052898802:android:47871b1d43db1f65d3616b",
+        "android_client_info": {
+          "package_name": "com.cloud_continuum.payzabt.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZxgcTTnlPOYs29a5C9w56yu9ILhHaeDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156052898802:android:bc12f3b8e8184249d3616b",
+        "android_client_info": {
+          "package_name": "com.cloud_continuum.payzabt.staging"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZxgcTTnlPOYs29a5C9w56yu9ILhHaeDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
     }
   ],
   "configuration_version": "1"

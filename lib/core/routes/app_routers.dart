@@ -1,3 +1,5 @@
+import 'package:payzabt/features/splash/splash_view.dart';
+
 import '../../config/export/export.dart';
 
 class AppRouter {
@@ -7,6 +9,9 @@ class AppRouter {
     switch (settings.name) {
       case AppRoute.zoomImageView:
         return MaterialPageRoute(builder: (_) => ZoomImageScreen(args: args));
+
+      case AppRoute.splashScreen:
+        return MaterialPageRoute(builder: (_) => SplashView());
 
       default:
         return MaterialPageRoute(
