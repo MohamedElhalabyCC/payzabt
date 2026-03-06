@@ -9,7 +9,12 @@ abstract class AppColors {
   static const Color fillColorLight = Color(0xFFFFFFFF);
   static const Color buttonFillLight = Color(0xFFE9F0FF);
   static const Color textLight = Color(0xFF1C2A3A);
-  static const Color lightPrimary = Color(0xFFFDFDFD);
+  static const Color lightPrimary = Color(0xFF39977B);
+  static const Color lightSecondary = Color(0xFF0B5DB0);
+  static const Color lighterGreen = Color(0xFF00BC7D);
+  static const Color lighterBlue = Color(0xFF226CD1);
+  static const Color lightBlueGreen = Color(0xFF00BBA7);
+  static const Color lightDarkerBlue = Color(0xFF0B5DB0);
   static const Color lightBackgroundCard = Color(0xFFFDFDFD);
   static const Color textParaLight = Color(0xFF626467);
   static const Color borderDarkGreyL = Color(0xFFB0B1B3);
@@ -28,6 +33,11 @@ abstract class AppColors {
   static const Color buttonFillDark = Color(0xFFE9F0FF);
   static const Color textDark = Color(0xFFF2F2F2);
   static const Color darkPrimary = Color(0xFF20212E);
+  static const Color darkSecondary = Color(0xFF0B5DB0);
+  static const Color darkerGreen = Color(0xFF00BC7D);
+  static const Color darkerBlue = Color(0xFF226CD1);
+  static const Color darkBlueGreen = Color(0xFF00BBA7);
+  static const Color darkDarkerBlue = Color(0xFF0B5DB0);
   static const Color darkBackgroundCard = Color(0xFF20212E);
   static const Color borderGreyDark = Color(0xFF7B7D81);
   static const Color textParaDark = Color(0xFFCACBCD);
@@ -41,7 +51,7 @@ abstract class AppColors {
   static const Color borderRegularDark = Color(0xFF7B7D81);
 
   // other colors
-  static const Color textWhite = Color(0xFFFDFDFD);
+  static const Color textWhite = Color(0xFFEBEBEB);
   static const Color textGreyed = Color(0xFF7D8A95);
   static const Color mainAppColor = Color(0xFF1EB7CF);
   static const Color cardBackground = Color(0xFFFDFDFD);
@@ -49,10 +59,11 @@ abstract class AppColors {
   static const Color icon = Color(0xFF7D8A95);
   static const Color textError = Color(0xFFFC2F20);
   static const Color star = Color(0xFFEDBA4A);
+  static const Color lightYellow = Color(0xFFE8FFC1);
   static const Color waitingColor = Color(0xFFFFA726);
   static const Color orangeColor = Color(0xFFFF9500);
   static const Color confirmedColor = Color(0xff28C76F);
-  static const Color green = Color(0xFF4FC33D);
+  static const Color green = Color(0xFF00BC59);
   static const Color darkGreen = Color(0xff116A77);
   static const Color grey = Color(0xFF7D8A95);
   static const Color lightGrey = Color(0xFFD1D5DB);
@@ -85,6 +96,20 @@ abstract class DynamicColors {
       context,
       AppColors.lightBackground,
       AppColors.darkBackground,
+    );
+  }
+  static Color primary(BuildContext context) {
+    return getColor(
+      context,
+      AppColors.lightPrimary,
+      AppColors.darkPrimary,
+    );
+  }
+  static Color secondary(BuildContext context) {
+    return getColor(
+      context,
+      AppColors.lightSecondary,
+      AppColors.darkSecondary,
     );
   }
 

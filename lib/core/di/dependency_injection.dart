@@ -2,6 +2,9 @@ import 'dart:developer';
 
 import 'package:payzabt/core/networking/network/app_api_constants.dart';
 import 'package:payzabt/core/networking/network/dio_consumer.dart';
+import 'package:payzabt/features/auth/data/api/auth_api_services.dart';
+import 'package:payzabt/features/auth/data/repo/auth_repo.dart';
+import 'package:payzabt/features/auth/logic/auth_cubit.dart';
 
 import '../../config/export/export.dart';
 import '../networking/network/base_consumer.dart';
@@ -43,6 +46,13 @@ Future<void> setupGetIt() async {
   ///! FOR APP CUBIT ///
   getIt.registerFactory<AppCubit>(() => AppCubit());
 
+
+
+// TODO: add these 4 lines to dependency injection file and these imports
+  ///!MARK: FOR Auth  ///
+  getIt.registerFactory<AuthCubit>(
+          () => AuthCubit(getIt<AuthRepo>()));
+  getIt.registerLazySingleton<AuthRepo>(() => AuthApiServices());
   // ///!MARK: FOR Profile  ///
   // getIt.registerFactory<ProfileCubit>(() => ProfileCubit(getIt<ProfileRepo>()));
   // getIt.registerLazySingleton<ProfileRepo>(() => ProfileApiServices());
