@@ -1,15 +1,24 @@
 import '../../../../config/export/export.dart';
 
 class OnboardingTextSection extends StatelessWidget {
-  const OnboardingTextSection({super.key, required this.title, required this.subtitle});
+  const OnboardingTextSection({
+    super.key,
+    required this.title,
+    required this.subtitle,
+    this.spacing, this.mainAxisAlignment, this.crossAxisAlignment,
+  });
 
-  final String title,subtitle;
+  final String title, subtitle;
+  final double? spacing;
+  final MainAxisAlignment? mainAxisAlignment ;
+  final CrossAxisAlignment? crossAxisAlignment ;
+
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      spacing: 14.h,
+      mainAxisAlignment:mainAxisAlignment?? MainAxisAlignment.center,
+      crossAxisAlignment:crossAxisAlignment?? CrossAxisAlignment.center,
+      spacing: spacing ?? 14.h,
       children: [
         AppText(
           text: title,
@@ -19,7 +28,6 @@ class OnboardingTextSection extends StatelessWidget {
             color: AppColors.textWhite,
           ).copyWith(fontSize: 30.sp),
         ),
-
         AppText(
           text: subtitle,
           textAlign: TextAlign.center,

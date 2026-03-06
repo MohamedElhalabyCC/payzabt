@@ -1,3 +1,4 @@
+import 'package:payzabt/features/auth/logic/auth_cubit.dart';
 import 'package:payzabt/features/auth/views/login_view.dart';
 import 'package:payzabt/features/onboarding/views/onboarding_view.dart';
 import 'package:payzabt/features/splash/splash_view.dart';
@@ -17,7 +18,12 @@ class AppRouter {
       case AppRoute.onboardingView:
         return MaterialPageRoute(builder: (_) => OnboardingView());
       case AppRoute.loginScreen:
-        return MaterialPageRoute(builder: (_) => LoginView());
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<AuthCubit>(),
+            child: LoginView(),
+          ),
+        );
 
       default:
         return MaterialPageRoute(

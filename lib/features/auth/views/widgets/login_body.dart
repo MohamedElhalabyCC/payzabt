@@ -1,10 +1,14 @@
-import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:payzabt/config/export/export.dart';
 
-class AuthBody extends StatelessWidget {
-  const AuthBody({super.key});
+class LoginBody extends StatelessWidget {
+  const LoginBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(children: []);
+    return Column(
+      children: [
+      ],
+    );
   }
 }

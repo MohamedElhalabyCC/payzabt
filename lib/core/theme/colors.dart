@@ -52,7 +52,8 @@ abstract class AppColors {
 
   // other colors
   static const Color textWhite = Color(0xFFEBEBEB);
-  static const Color textGreyed = Color(0xFF7D8A95);
+  static const Color textGreyed = Color(0xFF4A5565);
+  static const Color textBlue = Color(0xFF0B7FC1);
   static const Color mainAppColor = Color(0xFF1EB7CF);
   static const Color cardBackground = Color(0xFFFDFDFD);
   static const Color disabled = Color(0xFF95979A);

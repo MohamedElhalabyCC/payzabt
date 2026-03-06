@@ -11,10 +11,13 @@ abstract class  LocaleKeys {
   static const signIn = 'signIn';
   static const createAccount = 'createAccount';
   static const forgotPassword = 'forgotPassword';
+  static const signInToContinue = 'signInToContinue';
   static const resetPassword = 'resetPassword';
   static const verifyCode = 'verifyCode';
   static const checkEmail = 'checkEmail';
   static const trackYourSpend = 'trackYourSpend';
+  static const mustBe8Characters = 'mustBe8Characters';
+  static const dontHaveAccount = 'dontHaveAccount';
   static const trackYourExpenses = 'trackYourExpenses';
   static const organizeSpendingWithEnvelopes = 'organizeSpendingWithEnvelopes';
   static const setLimitsForCategories = 'setLimitsForCategories';

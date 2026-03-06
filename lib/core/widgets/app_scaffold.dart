@@ -41,7 +41,7 @@ class AppScaffold extends StatelessWidget {
                 ),
               ),
               child: SafeArea(
-                child: body!.paddingSymmetric(horizontal: 18.w, vertical: 16.h),
+                child: body!,
               ),
             )
           : body!.paddingOnly(

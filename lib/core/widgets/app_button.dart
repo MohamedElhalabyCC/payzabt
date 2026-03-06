@@ -39,15 +39,15 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        shadowColor: shadowColor ?? AppColors.mainAppColor,
+        shadowColor: shadowColor ?? Colors.transparent,
         elevation: elevation ?? 0.0,
-        minimumSize: Size(width ?? double.infinity, height ?? 56.h),
+        minimumSize: Size(width ?? double.infinity, height ?? 50.h),
         padding: padding ?? EdgeInsets.zero,
 
         backgroundColor: inverseColor
             ? DynamicColors.border(context)
             : (background ??
-                  AppColors.mainAppColor.withValues(
+                  AppColors.lightSecondary.withValues(
                     alpha: isLoading == true ? 0.7 : 1.0,
                   )),
         backgroundBuilder: (context, states, child) {

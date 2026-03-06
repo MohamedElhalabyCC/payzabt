@@ -28,16 +28,22 @@ class AppMainContainer extends StatelessWidget {
       height: height,
       width: width,
       padding: EdgeInsets.symmetric(
-        horizontal: hPadding ?? 4,
-        vertical: vPadding ?? 4,
+        horizontal: hPadding ?? 30,
+        vertical: vPadding ?? 12,
       ),
-      decoration: decoration ??
-          BoxDecoration(
-            color: color ?? DynamicColors.borderDarkGrey(context),
-            borderRadius: BorderRadius.circular(radius ?? 12.r),
-            border: border,
-            boxShadow: boxShadow,
+      decoration: decoration ??BoxDecoration(
+        color: color ??DynamicColors.textColorInverse(context),
+        borderRadius: BorderRadius.circular(radius??24.h),
+        border: border,
+        boxShadow:boxShadow?? [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.25),
+            offset: const Offset(0, 25),
+            blurRadius: 50,
+            spreadRadius: -12,
           ),
+        ],
+      ),
       child: child,
     );
   }
