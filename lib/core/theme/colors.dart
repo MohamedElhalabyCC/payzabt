@@ -10,7 +10,7 @@ abstract class AppColors {
   static const Color buttonFillLight = Color(0xFFE9F0FF);
   static const Color textLight = Color(0xFF1C2A3A);
   static const Color lightPrimary = Color(0xFF39977B);
-  static const Color lightSecondary = Color(0xFF0B5DB0);
+  static const Color lightSecondary = Color(0xFF077AAD);
   static const Color lighterGreen = Color(0xFF00BC7D);
   static const Color lighterBlue = Color(0xFF226CD1);
   static const Color lightBlueGreen = Color(0xFF00BBA7);
@@ -66,6 +66,7 @@ abstract class AppColors {
   static const Color green = Color(0xFF00BC59);
   static const Color darkGreen = Color(0xff116A77);
   static const Color grey = Color(0xFF7D8A95);
+  static const Color activeDot = Color(0xFF717182);
   static const Color lightGrey = Color(0xFFD1D5DB);
 
   static const Color buttonBg = Color(0xFF7D8A95);

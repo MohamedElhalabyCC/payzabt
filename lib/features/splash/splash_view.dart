@@ -47,10 +47,7 @@ class _SplashViewState extends State<SplashView> {
           });
         } else {
           timer.cancel();
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (context) => const ProfileView()),
-          );
+          context.pushNamedAndRemoveUntil(AppRoute.onboardingView);
         }
       }
     });

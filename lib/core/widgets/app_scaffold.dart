@@ -5,6 +5,7 @@ class AppScaffold extends StatelessWidget {
   final PreferredSizeWidget? appBar;
   final Color? backgroundColor;
   final bool? resizeToAvoidBottomInset;
+  final bool isBackgroundImage;
   final double? horizontalPadding, verticalPadding;
   final FloatingActionButtonLocation? floatingActionButtonLocation;
 
@@ -19,6 +20,7 @@ class AppScaffold extends StatelessWidget {
     this.verticalPadding,
     this.backgroundColor,
     this.resizeToAvoidBottomInset,
+    this.isBackgroundImage = false,
   });
 
   @override
@@ -28,12 +30,26 @@ class AppScaffold extends StatelessWidget {
       extendBody: true,
       resizeToAvoidBottomInset: resizeToAvoidBottomInset ?? false,
       appBar: appBar,
-      body: SafeArea(top: false, bottom: false, child: body!).paddingOnly(
-        left: horizontalPadding ?? 20.w,
-        right: horizontalPadding ?? 20.w,
-        top: verticalPadding ?? 60.h,
-        bottom: 0,
-      ),
+      body: isBackgroundImage
+          ? Container(
+              width: double.infinity,
+              height: double.infinity,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(Assets.imagesPngSplashBackground),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: SafeArea(
+                child: body!.paddingSymmetric(horizontal: 18.w, vertical: 16.h),
+              ),
+            )
+          : body!.paddingOnly(
+              left: horizontalPadding ?? 20.w,
+              right: horizontalPadding ?? 20.w,
+              top: verticalPadding ?? 60.h,
+              bottom: 0,
+            ),
       bottomNavigationBar: bottomNavigationBar,
       floatingActionButton: floatingActionButton,
       floatingActionButtonLocation: floatingActionButtonLocation,

@@ -46,9 +46,6 @@ Future<void> setupGetIt() async {
   ///! FOR APP CUBIT ///
   getIt.registerFactory<AppCubit>(() => AppCubit());
 
-
-
-// TODO: add these 4 lines to dependency injection file and these imports
   ///!MARK: FOR Auth  ///
   getIt.registerFactory<AuthCubit>(
           () => AuthCubit(getIt<AuthRepo>()));

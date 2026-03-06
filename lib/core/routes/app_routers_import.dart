@@ -1,8 +1,6 @@
 class AppRoute {
   static const String splashScreen = '/splashView';
-  static const String onboardingView = '/onboardingView';
-  static const String onboarding1View = '/Onboarding1View';
-  static const String onboarding2View = '/Onboarding2View';
+  static const String onboardingView = '/OnboardingView';
   static const String bottomNavBarScreen = '/bottomNavBarScreen';
   static const String loginScreen = '/loginScreen';
   static const String jobDataView = '/JobDataView';

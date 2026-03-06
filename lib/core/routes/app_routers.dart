@@ -1,3 +1,5 @@
+import 'package:payzabt/features/auth/views/login_view.dart';
+import 'package:payzabt/features/onboarding/views/onboarding_view.dart';
 import 'package:payzabt/features/splash/splash_view.dart';
 
 import '../../config/export/export.dart';
@@ -12,6 +14,10 @@ class AppRouter {
 
       case AppRoute.splashScreen:
         return MaterialPageRoute(builder: (_) => SplashView());
+      case AppRoute.onboardingView:
+        return MaterialPageRoute(builder: (_) => OnboardingView());
+      case AppRoute.loginScreen:
+        return MaterialPageRoute(builder: (_) => LoginView());
 
       default:
         return MaterialPageRoute(
