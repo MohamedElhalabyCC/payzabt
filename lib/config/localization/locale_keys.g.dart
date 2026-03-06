@@ -11,6 +11,13 @@ abstract class  LocaleKeys {
   static const signIn = 'signIn';
   static const createAccount = 'createAccount';
   static const forgotPassword = 'forgotPassword';
+  static const createNewAccount = 'createNewAccount';
+  static const repeatPassword = 'repeatPassword';
+  static const createPassword = 'createPassword';
+  static const moneyOrganizedInOnePlace = 'moneyOrganizedInOnePlace';
+  static const agreeToThe = 'agreeToThe';
+  static const and = 'and';
+  static const haveAnAccount = 'haveAnAccount';
   static const signInToContinue = 'signInToContinue';
   static const resetPassword = 'resetPassword';
   static const verifyCode = 'verifyCode';

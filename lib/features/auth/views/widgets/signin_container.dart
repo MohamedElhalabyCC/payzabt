@@ -33,7 +33,7 @@ class SignInContainer extends StatelessWidget {
               return CustomTextField(
                 obscureText: state,
                 title: LocaleKeys.password.tr(),
-                hintText: "must be 8 characters",
+                hintText: LocaleKeys.mustBe8Characters.tr(),
               );
             },
           ),
@@ -67,7 +67,7 @@ class SignInContainer extends StatelessWidget {
               ),
               6.sizeBoxW,
               InkWell(
-                onTap: () {},
+                onTap: () =>context.pushNamedAndRemoveUntil(AppRoute.signUpView),
                 child: AppText(
                   text: LocaleKeys.createAccount.tr(),
                   appTextStyle: TextStyles.styleH1Bold16(

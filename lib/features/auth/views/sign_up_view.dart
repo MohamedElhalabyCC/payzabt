@@ -1,10 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:payzabt/config/export/export.dart';
+import 'package:payzabt/features/auth/views/widgets/sign_up_container.dart';
 import 'package:payzabt/features/auth/views/widgets/signin_container.dart';
 import 'package:payzabt/features/onboarding/views/widgets/onboarding_text_section.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class SignUpView extends StatelessWidget {
+  const SignUpView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +17,12 @@ class LoginView extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          8.sizeBoxH,
           AppImageView(
             Assets.imagesPngLogo,
             width: MediaQuery.of(context).size.height * 0.2,
             fit: BoxFit.fitWidth,
           ),
+          1.sizeBoxH,
           Expanded(
             child: SingleChildScrollView(
               child: Column(
@@ -29,21 +30,19 @@ class LoginView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  20.sizeBoxH,
                   OnboardingTextSection(
-                    title: LocaleKeys.welcomeBack.tr(),
-                    subtitle: LocaleKeys.signInToContinue.tr(),
+                    title: LocaleKeys.createNewAccount.tr(),
+                    subtitle: LocaleKeys.moneyOrganizedInOnePlace.tr(),
                     spacing: 0,
                     crossAxisAlignment: CrossAxisAlignment.start,
                   ),
-                  SignInContainer(),
-                  1.sizeBoxH,
+                  SignUpContainer(),
                 ],
               ),
             ),
           ),
         ],
-      ).paddingSymmetric(horizontal: 16.w,),
+      ).paddingSymmetric(horizontal: 16.w,vertical: 12.h),
     );
   }
 }

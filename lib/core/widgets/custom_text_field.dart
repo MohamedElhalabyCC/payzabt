@@ -287,7 +287,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                                 _obscureText
                                     ? Icons.visibility_off_outlined
                                     : Icons.visibility_outlined,
-                                color: Colors.black87,
+                                color: Colors.black.withValues(alpha: 0.6),
                                 size: 26.h,
                               ),
                               onPressed: () {

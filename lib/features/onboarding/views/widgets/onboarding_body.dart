@@ -101,8 +101,9 @@ class _OnboardingBodyState extends State<OnboardingBody> {
                   },
                 ),
               ),
+              12.sizeBoxH,
             ],
-          );
+          ).paddingHorizontalOnly(16.h);
         },
       ),
     );
