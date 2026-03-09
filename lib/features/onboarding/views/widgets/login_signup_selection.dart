@@ -29,6 +29,7 @@ class LoginSignupSelection extends StatelessWidget {
         AppButton(
           title: LocaleKeys.createAccount.tr(),
           background: Colors.transparent,
+          onTap: ()=>context.pushNamedAndRemoveUntil(AppRoute.signUpView),
           textColor:AppColors.textWhite,
           borderColor: AppColors.textWhite,
           shadowColor: Colors.transparent,

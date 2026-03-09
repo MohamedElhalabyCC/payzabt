@@ -21,11 +21,11 @@ class ArrowBackWidget extends StatelessWidget {
         padding: EdgeInsets.all(6.w),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8.r),
-          color: Colors.white38,
+          color: Colors.transparent,
         ),
         child: Icon(
-          Icons.arrow_back_ios_new,
-          size: 20.r,
+          Icons.arrow_back_outlined,
+          size: 28.r,
           color: DynamicColors.textColorInverse(context),
         ),
       ),

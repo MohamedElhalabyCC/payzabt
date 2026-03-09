@@ -3,12 +3,12 @@ class AppRoute {
   static const String onboardingView = '/OnboardingView';
   static const String bottomNavBarScreen = '/bottomNavBarScreen';
   static const String loginScreen = '/loginScreen';
-  static const String jobDataView = '/JobDataView';
+  static const String forgetPasswordView = '/ForgetPasswordView';
+  static const String oTPView = '/OTPView';
   static const String zoomImageView = '/zoomImageView';
   static const String signUpView = '/signUpView';
   static const String profileInformationView = '/profileInformationView';
   static const String customNavBar = '/customNavBar';
-  static const String forgetPasswordView = '/ForgetPasswordView';
   static const String specialityView = '/specialityView';
   static const String specialityDoctorsView = '/SpecialityDoctorsView';
   static const String privacyView = 'PrivacyView';

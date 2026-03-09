@@ -1,5 +1,7 @@
 import 'package:payzabt/features/auth/logic/auth_cubit.dart';
+import 'package:payzabt/features/auth/views/forget_password_view.dart';
 import 'package:payzabt/features/auth/views/login_view.dart';
+import 'package:payzabt/features/auth/views/otp_view.dart';
 import 'package:payzabt/features/auth/views/sign_up_view.dart';
 import 'package:payzabt/features/onboarding/views/onboarding_view.dart';
 import 'package:payzabt/features/splash/splash_view.dart';
@@ -30,6 +32,22 @@ class AppRouter {
           builder: (_) => BlocProvider(
             create: (context) => getIt<AuthCubit>(),
             child: SignUpView(),
+          ),
+        );
+
+      case AppRoute.forgetPasswordView:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<AuthCubit>(),
+            child: ForgetPasswordView(),
+          ),
+        );
+
+      case AppRoute.oTPView:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<AuthCubit>(),
+            child: OTPView(),
           ),
         );
 

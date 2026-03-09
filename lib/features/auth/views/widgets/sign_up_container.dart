@@ -93,7 +93,7 @@ class SignUpContainer extends StatelessWidget {
               ),
               6.sizeBoxW,
               InkWell(
-                onTap: () {},
+                onTap: () =>context.pushNamedAndRemoveUntil(AppRoute.loginScreen),
                 child: AppText(
                   text: LocaleKeys.signIn.tr(),
                   appTextStyle: TextStyles.styleH1Bold16(

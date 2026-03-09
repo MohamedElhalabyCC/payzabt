@@ -40,7 +40,7 @@ class SignInContainer extends StatelessWidget {
           Align(
             alignment: AlignmentDirectional.centerEnd,
             child: InkWell(
-              onTap: () {},
+              onTap: () => context.pushNamed(AppRoute.forgetPasswordView),
               child: AppText(
                 color: AppColors.lightSecondary,
                 text: LocaleKeys.forgotPassword.tr(),
@@ -50,11 +50,7 @@ class SignInContainer extends StatelessWidget {
               ),
             ),
           ),
-          AppButton(
-            title: LocaleKeys.signIn.tr(),
-            height: 50.h,
-            onTap: () {},
-          ),
+          AppButton(title: LocaleKeys.signIn.tr(), height: 50.h, onTap: () {}),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -67,7 +63,8 @@ class SignInContainer extends StatelessWidget {
               ),
               6.sizeBoxW,
               InkWell(
-                onTap: () =>context.pushNamedAndRemoveUntil(AppRoute.signUpView),
+                onTap: () =>
+                    context.pushNamedAndRemoveUntil(AppRoute.signUpView),
                 child: AppText(
                   text: LocaleKeys.createAccount.tr(),
                   appTextStyle: TextStyles.styleH1Bold16(

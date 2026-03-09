@@ -10,6 +10,7 @@ abstract class  LocaleKeys {
   static const exploreApp = 'exploreApp';
   static const signIn = 'signIn';
   static const createAccount = 'createAccount';
+  static const forgotPassword_ = 'forgotPassword_';
   static const forgotPassword = 'forgotPassword';
   static const createNewAccount = 'createNewAccount';
   static const repeatPassword = 'repeatPassword';

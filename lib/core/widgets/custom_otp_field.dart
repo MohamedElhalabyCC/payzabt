@@ -30,11 +30,11 @@ class _CustomOtpFieldState extends State<CustomOtpField> {
           controller: widget.controller,
           defaultPinTheme: PinTheme(
             width: 70,
-            height: 70,
+            height: 50,
             textStyle: TextStyle(
-              fontSize: 40.sp,
+              fontSize: 30.sp,
               color: DynamicColors.textColor(context),
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w400,
             ),
             decoration: BoxDecoration(
               color: Colors.transparent,
@@ -44,39 +44,39 @@ class _CustomOtpFieldState extends State<CustomOtpField> {
           ),
           focusedPinTheme: PinTheme(
             width: 70,
-            height: 70,
+            height: 50,
             textStyle: TextStyle(
-              fontSize: 40.sp,
+              fontSize: 30.sp,
               color: DynamicColors.textColor(context),
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w400,
             ),
             decoration: BoxDecoration(
               color: Colors.transparent,
-              border: Border.all(color: AppColors.mainAppColor),
+              border: Border.all(color: AppColors.lightSecondary),
               borderRadius: BorderRadius.circular(12),
             ),
           ),
           submittedPinTheme: PinTheme(
             width: 70,
-            height: 70,
+            height: 50,
             textStyle: TextStyle(
-              fontSize: 40.sp,
+              fontSize: 30.sp,
               color: DynamicColors.textColor(context),
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w400,
             ),
             decoration: BoxDecoration(
               color: Colors.transparent,
-              border: Border.all(color: AppColors.mainAppColor),
+              border: Border.all(color: AppColors.lightSecondary),
               borderRadius: BorderRadius.circular(12),
             ),
           ),
           errorPinTheme: PinTheme(
             width: 70,
-            height: 70,
+            height: 50,
             textStyle: TextStyle(
-              fontSize: 40.sp,
+              fontSize: 30.sp,
               color: DynamicColors.textColor(context),
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w400,
             ),
             decoration: BoxDecoration(
               color: Colors.transparent,
