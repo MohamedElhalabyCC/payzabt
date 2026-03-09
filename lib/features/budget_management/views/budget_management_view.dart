@@ -141,9 +141,9 @@ class _BudgetManagementViewState extends State<BudgetManagementView> {
                           counter.value++;
                         } else {
                           // Final step logic if any, or navigation
-                          // context.pushNamed(
-                          //   AppRoute.onboardingView,
-                          // ); // Example navigation
+                          context.pushNamed(
+                            AppRoute.savingsView,
+                          );
                         }
                       },
                       child: Row(

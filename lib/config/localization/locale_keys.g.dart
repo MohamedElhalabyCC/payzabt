@@ -20,6 +20,7 @@ abstract class  LocaleKeys {
   static const enterSpecificDay = 'enterSpecificDay';
   static const dayOfMonthRange = 'dayOfMonthRange';
   static const day = 'day';
+  static const savingsGrowingTip = 'savingsGrowingTip';
   static const skipSavingsStep = 'skipSavingsStep';
   static const incomeUnderstandingTip = 'incomeUnderstandingTip';
   static const savingTip = 'savingTip';

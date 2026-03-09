@@ -7,7 +7,7 @@ class AppRoute {
   static const String oTPView = '/OTPView';
   static const String budgetManagementView = '/BudgetManagementView';
   static const String signUpView = '/signUpView';
-  static const String profileInformationView = '/profileInformationView';
+  static const String savingsView = '/SavingsView';
   static const String customNavBar = '/customNavBar';
   static const String specialityView = '/specialityView';
   static const String specialityDoctorsView = '/SpecialityDoctorsView';

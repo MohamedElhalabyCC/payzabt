@@ -6,6 +6,8 @@ import 'package:payzabt/features/auth/views/sign_up_view.dart';
 import 'package:payzabt/features/budget_management/logic/budget_management_cubit.dart';
 import 'package:payzabt/features/budget_management/views/budget_management_view.dart';
 import 'package:payzabt/features/onboarding/views/onboarding_view.dart';
+import 'package:payzabt/features/savings/logic/savings_cubit.dart';
+import 'package:payzabt/features/savings/views/savings_view.dart';
 import 'package:payzabt/features/splash/splash_view.dart';
 
 import '../../config/export/export.dart';
@@ -55,6 +57,14 @@ class AppRouter {
           builder: (_) => BlocProvider(
             create: (context) => getIt<BudgetManagementCubit>(),
             child: BudgetManagementView(),
+          ),
+        );
+
+      case AppRoute.savingsView:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<SavingsCubit>(),
+            child: SavingsView(),
           ),
         );
 

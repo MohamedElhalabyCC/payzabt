@@ -52,6 +52,7 @@ abstract class AppColors {
 
   // other colors
   static const Color textWhite = Color(0xFFEBEBEB);
+  static const Color subText = Color(0xff6A7282);
   static const Color textGreyed = Color(0xFF4A5565);
   static const Color textBlue = Color(0xFF0B7FC1);
   static const Color mainAppColor = Color(0xFF1EB7CF);

@@ -15,7 +15,6 @@ class ArrowBackWidget extends StatelessWidget {
             context.pop();
           },
       child: Container(
-        margin: EdgeInsets.all(5.w),
         height: 32.h,
         width: 32.w,
         padding: EdgeInsets.all(6.w),
