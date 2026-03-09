@@ -76,13 +76,21 @@ abstract class AppColors {
   static const Color deepBlue = Color(0xFF201C59);
   static const Color mintBlue = Color(0xFFD0E3FB);
   static const LinearGradient appGradient = LinearGradient(
-    begin: Alignment.topRight,
-    end: Alignment.bottomLeft,
-    colors: [Color(0xFFD0E3FB), Color(0xFF0C448D)],
+    begin: Alignment(0.09, -1.00),
+    end: Alignment(-0.09, 1),
+    colors: gradientColors,
+  );
+  static const LinearGradient appGradient1 = LinearGradient(
+    begin: Alignment(0.09, -1.50),
+    end: Alignment(0.09, 1),
+    colors: gradientColors,
   );
   static const List<Color> gradientColors = [
-    Color(0xFFD0E3FB),
-    Color(0xFF0C448D),
+    Color(0xFF00BC7D),
+
+    Color(0xFF00BBA7),
+
+    Color(0xFF0B5DB0),
   ];
 }
 
@@ -100,19 +108,13 @@ abstract class DynamicColors {
       AppColors.darkBackground,
     );
   }
+
   static Color primary(BuildContext context) {
-    return getColor(
-      context,
-      AppColors.lightPrimary,
-      AppColors.darkPrimary,
-    );
+    return getColor(context, AppColors.lightPrimary, AppColors.darkPrimary);
   }
+
   static Color secondary(BuildContext context) {
-    return getColor(
-      context,
-      AppColors.lightSecondary,
-      AppColors.darkSecondary,
-    );
+    return getColor(context, AppColors.lightSecondary, AppColors.darkSecondary);
   }
 
   static Color backgroundInverse(BuildContext context) {

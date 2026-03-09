@@ -32,7 +32,7 @@ class AppMainContainer extends StatelessWidget {
         vertical: vPadding ?? 12,
       ),
       decoration: decoration ??BoxDecoration(
-        color: color ??DynamicColors.textColorInverse(context),
+        color: color ??Colors.white,
         borderRadius: BorderRadius.circular(radius??24.h),
         border: border,
         boxShadow:boxShadow?? [

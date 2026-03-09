@@ -50,7 +50,12 @@ class SignInContainer extends StatelessWidget {
               ),
             ),
           ),
-          AppButton(title: LocaleKeys.signIn.tr(), height: 50.h, onTap: () {}),
+          AppButton(
+            title: LocaleKeys.signIn.tr(),
+            height: 50.h,
+            onTap: () =>
+                context.pushNamedAndRemoveUntil(AppRoute.budgetManagementView),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

@@ -5,7 +5,7 @@ class AppRoute {
   static const String loginScreen = '/loginScreen';
   static const String forgetPasswordView = '/ForgetPasswordView';
   static const String oTPView = '/OTPView';
-  static const String zoomImageView = '/zoomImageView';
+  static const String budgetManagementView = '/BudgetManagementView';
   static const String signUpView = '/signUpView';
   static const String profileInformationView = '/profileInformationView';
   static const String customNavBar = '/customNavBar';

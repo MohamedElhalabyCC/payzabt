@@ -13,7 +13,7 @@ class CustomTextField extends StatefulWidget {
   final Widget? prefixIcon;
   final bool? enabled;
 
-  final double? tPadding, bPadding, borderRadius;
+  final double? tPadding, bPadding, lPadding, rPadding, borderRadius;
   final TextAlign? textAlign;
   final FocusNode? focusNode;
   final AutovalidateMode? autovalidateMode;
@@ -25,7 +25,7 @@ class CustomTextField extends StatefulWidget {
   final Color? enabledColor, cursorColor, fillColor, focusColor;
   final List<String>? autofillHints;
   final TextInputType? keyboardType;
-  final bool? autoCorrect, isFill;
+  final bool? autoCorrect, isFill, showCounter;
   final ValueChanged<String>? onFieldSubmitted;
   final String? title;
   final String? otherSideTitle;
@@ -74,6 +74,8 @@ class CustomTextField extends StatefulWidget {
     this.hintStyle,
     this.tPadding,
     this.bPadding,
+    this.lPadding,
+    this.rPadding,
     this.borderRadius,
     this.textAlign,
     this.focusNode,
@@ -82,6 +84,7 @@ class CustomTextField extends StatefulWidget {
     this.fillColor,
     this.autoCorrect,
     this.isFill,
+    this.showCounter = true,
     this.enabledColor,
     this.cursorColor,
     this.focusColor,
@@ -250,7 +253,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                         minHeight: 0,
                       ),
                       suffixIconConstraints: const BoxConstraints(
-                        minWidth: 50,
+                        minWidth: 40,
                         minHeight: 0,
                       ),
                       fillColor:
@@ -260,8 +263,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
                           widget.focusColor ??
                           DynamicColors.textColorInverse(context),
                       contentPadding: EdgeInsets.only(
-                        left: 15.w,
-                        right: 15.w,
+                        left: widget.lPadding ?? 15.w,
+                        right: widget.rPadding ?? 15.w,
                         top: widget.tPadding ?? 8.h,
                         bottom: widget.bPadding ?? 8.h,
                       ),
@@ -269,7 +272,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
                           ? UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color:
-                                    widget.focusColor ?? AppColors.lightSecondary,
+                                    widget.focusColor ??
+                                    AppColors.lightSecondary,
                               ),
                             )
                           : OutlineInputBorder(
@@ -278,7 +282,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
                               ),
                               borderSide: BorderSide(
                                 color:
-                                    widget.focusColor ?? AppColors.lightSecondary,
+                                    widget.focusColor ??
+                                    AppColors.lightSecondary,
                               ),
                             ),
                       suffixIcon: widget.obscureText == true
@@ -309,9 +314,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                                 widget.borderRadius ?? 10.r,
                               ),
                               borderSide: BorderSide(
-                                color:
-                                    widget.enabledColor ??
-                                    Color(0xffD8DADC),
+                                color: widget.enabledColor ?? Color(0xffD8DADC),
                               ),
                             ),
                       disabledBorder: OutlineInputBorder(
@@ -319,7 +322,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
                           widget.borderRadius ?? 40.r,
                         ),
                         borderSide: BorderSide(
-                          color: widget.enabledColor ?? AppColors.lightSecondary,
+                          color:
+                              widget.enabledColor ?? AppColors.lightSecondary,
                         ),
                       ),
                       border: (widget.enabled == true)
@@ -335,11 +339,11 @@ class _CustomTextFieldState extends State<CustomTextField> {
                                 widget.borderRadius ?? 10.r,
                               ),
                               borderSide: BorderSide(
-                                color:
-                                    widget.enabledColor ??
-                                        Color(0xffD8DADC),
+                                color: widget.enabledColor ?? Color(0xffD8DADC),
                               ),
                             ),
+                      counterText: widget.showCounter == true ? null : "",
+                      counterStyle: const TextStyle(fontSize: 0, height: 0),
                     ),
                   ),
                 ),

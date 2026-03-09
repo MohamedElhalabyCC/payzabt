@@ -136,6 +136,15 @@ class TextStyles {
     fontWeight: FontWeightHelper.regular,
   );
 
+  static TextStyle styleParagraphRegular24(
+    BuildContext context, {
+    Color? color,
+  }) => TextStyle(
+    fontSize: 24.sp,
+    color: color ?? DynamicColors.textColor(context),
+    fontWeight: FontWeightHelper.regular,
+  );
+
   static TextStyle styleParagraphRegular12(
     BuildContext context, {
     Color? color,
