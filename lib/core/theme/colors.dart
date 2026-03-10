@@ -62,6 +62,7 @@ abstract class AppColors {
   static const Color textError = Color(0xFFFC2F20);
   static const Color star = Color(0xFFEDBA4A);
   static const Color lightYellow = Color(0xFFE8FFC1);
+  static const Color selectedYellow = Color(0xFFCBFF00);
   static const Color waitingColor = Color(0xFFFFA726);
   static const Color orangeColor = Color(0xFFFF9500);
   static const Color confirmedColor = Color(0xff28C76F);

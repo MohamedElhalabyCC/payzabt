@@ -8,6 +8,9 @@ import 'package:payzabt/features/auth/logic/auth_cubit.dart';
 import 'package:payzabt/features/budget_management/data/api/budget_management_api_services.dart';
 import 'package:payzabt/features/budget_management/data/repo/budget_management_repo.dart';
 import 'package:payzabt/features/budget_management/logic/budget_management_cubit.dart';
+import 'package:payzabt/features/home/data/api/home_api_services.dart';
+import 'package:payzabt/features/home/data/repo/home_repo.dart';
+import 'package:payzabt/features/home/logic/home_cubit.dart';
 import 'package:payzabt/features/savings/data/api/savings_api_services.dart';
 import 'package:payzabt/features/savings/data/repo/savings_repo.dart';
 import 'package:payzabt/features/savings/logic/savings_cubit.dart';
@@ -67,6 +70,10 @@ Future<void> setupGetIt() async {
           () => SavingsCubit(getIt<SavingsRepo>()));
   getIt.registerLazySingleton<SavingsRepo>(() => SavingsApiServices());
 
+  ///!MARK: FOR Home  ///
+  getIt.registerFactory<HomeCubit>(
+          () => HomeCubit(getIt<HomeRepo>()));
+  getIt.registerLazySingleton<HomeRepo>(() => HomeApiServices());
   // ///!MARK: FOR Profile  ///
   // getIt.registerFactory<ProfileCubit>(() => ProfileCubit(getIt<ProfileRepo>()));
   // getIt.registerLazySingleton<ProfileRepo>(() => ProfileApiServices());

@@ -1,4 +1,3 @@
-import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:payzabt/core/constants/api_constant.dart';
@@ -47,10 +46,6 @@ class AppCubit extends Cubit<AppState> {
   Future<void> _saveTheme(bool isDark) async {
     await AppPreferences().setData(SharedPrefKeys.isDarkMood, isDark);
   }
-
-  final NotchBottomBarController controller = NotchBottomBarController(
-    index: 0,
-  );
 
   //! ----------- Change BottomNavBar Selected Index ----------- //
   void changeBottomNavBarSelectedIndex(int index) {

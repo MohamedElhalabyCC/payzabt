@@ -3,6 +3,7 @@ import 'package:payzabt/features/auth/views/forget_password_view.dart';
 import 'package:payzabt/features/auth/views/login_view.dart';
 import 'package:payzabt/features/auth/views/otp_view.dart';
 import 'package:payzabt/features/auth/views/sign_up_view.dart';
+import 'package:payzabt/features/bottom_nav_bar/bottom_nav_bar_view.dart';
 import 'package:payzabt/features/budget_management/logic/budget_management_cubit.dart';
 import 'package:payzabt/features/budget_management/views/budget_management_view.dart';
 import 'package:payzabt/features/onboarding/views/onboarding_view.dart';
@@ -65,6 +66,14 @@ class AppRouter {
           builder: (_) => BlocProvider(
             create: (context) => getIt<SavingsCubit>(),
             child: SavingsView(),
+          ),
+        );
+
+      case AppRoute.bottomNavBarScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<SavingsCubit>(),
+            child: BottomNavBarView(),
           ),
         );
 

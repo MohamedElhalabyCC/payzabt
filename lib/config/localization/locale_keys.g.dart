@@ -13,7 +13,12 @@ abstract class  LocaleKeys {
   static const forgotPassword_ = 'forgotPassword_';
   static const forgotPassword = 'forgotPassword';
   static const newSavingAmount = 'newSavingAmount';
+  static const viewAll = 'viewAll';
+  static const hi = 'hi';
+  static const welcome = 'welcome';
+  static const recentTransactions = 'recentTransactions';
   static const allocatePortionToGoal = 'allocatePortionToGoal';
+  static const foodSpendingIncreaseInsight = 'foodSpendingIncreaseInsight';
   static const budgetCycleStartDayInfo = 'budgetCycleStartDayInfo';
   static const startWithMonthlyIncome = 'startWithMonthlyIncome';
   static const startWithMonthlyBudget = 'startWithMonthlyBudget';

@@ -165,7 +165,9 @@ class _BudgetManagementViewState extends State<BudgetManagementView> {
                     ).paddingSymmetric(horizontal: 40.w, vertical: 8.h),
                     8.sizeBoxH,
                     if (counter.value == 3)...[GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        context.pushNamed(AppRoute.bottomNavBarScreen);
+                      },
                       child: AppText(
                         text: LocaleKeys.skipForNow.tr(),
                         appTextStyle: TextStyles.styleParagraphRegular16(
