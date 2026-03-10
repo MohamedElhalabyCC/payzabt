@@ -46,7 +46,7 @@ class SavingsView extends StatelessWidget {
                       ),
                     ],
                   ),
-                  50.sizeBoxH,
+                  40.sizeBoxH,
                   AppText(
                     text: LocaleKeys.totalSavings.tr(),
                     appTextStyle: TextStyles.styleParagraphRegular14(

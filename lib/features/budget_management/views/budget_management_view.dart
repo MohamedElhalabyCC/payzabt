@@ -141,9 +141,7 @@ class _BudgetManagementViewState extends State<BudgetManagementView> {
                           counter.value++;
                         } else {
                           // Final step logic if any, or navigation
-                          context.pushNamed(
-                            AppRoute.savingsView,
-                          );
+                          context.pushNamed(AppRoute.savingsView);
                         }
                       },
                       child: Row(
@@ -157,18 +155,26 @@ class _BudgetManagementViewState extends State<BudgetManagementView> {
                             ).copyWith(fontSize: 18.sp),
                           ),
                           4.sizeBoxW,
-                          Icon(Icons.arrow_forward, color: Colors.white, size: 16),
+                          Icon(
+                            Icons.arrow_forward,
+                            color: Colors.white,
+                            size: 16,
+                          ),
                         ],
                       ),
                     ).paddingSymmetric(horizontal: 40.w, vertical: 8.h),
                     8.sizeBoxH,
-                    GestureDetector(
-                      onTap: (){},
+                    if (counter.value == 3)...[GestureDetector(
+                      onTap: () {},
                       child: AppText(
                         text: LocaleKeys.skipForNow.tr(),
-                        appTextStyle: TextStyles.styleParagraphRegular16(context,color:Color(0xff6A7282) )
-                      )
+                        appTextStyle: TextStyles.styleParagraphRegular16(
+                          context,
+                          color: Color(0xff6A7282),
+                        ),
+                      ),
                     ),
+                    12.sizeBoxH],
                   ],
                 ),
               ),

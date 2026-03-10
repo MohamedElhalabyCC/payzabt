@@ -4,7 +4,7 @@ abstract class AppColors {
   AppColors._();
 
   // light colors
-  static const Color lightBackground = Color(0xFFFAFAFC);
+  static const Color lightBackground = Color(0xFFF3F3F5);
   static const Color borderLight = Color(0xFFFFFFFF);
   static const Color fillColorLight = Color(0xFFFFFFFF);
   static const Color buttonFillLight = Color(0xFFE9F0FF);

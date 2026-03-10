@@ -126,21 +126,21 @@ class CustomDropDownMenu<T> extends StatelessWidget {
               borderRadius: BorderRadius.circular(borderRadius ?? 12.r),
               borderSide: BorderSide(
                 color:
-                    focusColor ?? DynamicColors.textFieldBorderColor(context),
+                    focusColor ?? Colors.transparent,
               ),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(borderRadius ?? 12.r),
               borderSide: BorderSide(
                 color:
-                    enabledColor ?? DynamicColors.textFieldBorderColor(context),
+                    enabledColor ?? Colors.transparent,
               ),
             ),
             disabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(borderRadius ?? 12.r),
               borderSide: BorderSide(
                 color:
-                    enabledColor ?? DynamicColors.textFieldBorderColor(context),
+                    enabledColor ?? Colors.transparent,
               ),
             ),
             border: OutlineInputBorder(

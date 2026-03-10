@@ -12,6 +12,8 @@ abstract class  LocaleKeys {
   static const createAccount = 'createAccount';
   static const forgotPassword_ = 'forgotPassword_';
   static const forgotPassword = 'forgotPassword';
+  static const newSavingAmount = 'newSavingAmount';
+  static const allocatePortionToGoal = 'allocatePortionToGoal';
   static const budgetCycleStartDayInfo = 'budgetCycleStartDayInfo';
   static const startWithMonthlyIncome = 'startWithMonthlyIncome';
   static const startWithMonthlyBudget = 'startWithMonthlyBudget';
@@ -20,6 +22,7 @@ abstract class  LocaleKeys {
   static const enterSpecificDay = 'enterSpecificDay';
   static const dayOfMonthRange = 'dayOfMonthRange';
   static const day = 'day';
+  static const updateTotalSaving = 'updateTotalSaving';
   static const savingsGrowingTip = 'savingsGrowingTip';
   static const skipSavingsStep = 'skipSavingsStep';
   static const incomeUnderstandingTip = 'incomeUnderstandingTip';
