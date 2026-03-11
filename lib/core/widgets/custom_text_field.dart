@@ -12,8 +12,9 @@ class CustomTextField extends StatefulWidget {
   final String? hintText;
   final Widget? prefixIcon;
   final bool? enabled;
+  final List<BoxShadow>? boxShadow;
 
-  final double? tPadding, bPadding, lPadding, rPadding, borderRadius;
+  final double? tPadding, bPadding, lPadding, rPadding, borderRadius,height;
   final TextAlign? textAlign;
   final FocusNode? focusNode;
   final AutovalidateMode? autovalidateMode;
@@ -101,7 +102,7 @@ class CustomTextField extends StatefulWidget {
     this.onCountryChanged,
     this.onEditingComplete,
     this.onTapOutside,
-    this.initvalue = '', this.hintColor,
+    this.initvalue = '', this.hintColor, this.boxShadow, this.height,
   });
 
   @override
@@ -187,164 +188,170 @@ class _CustomTextFieldState extends State<CustomTextField> {
                   SizedBox(width: 10.w),
                 ],
                 Expanded(
-                  child: TextFormField(
-                    onEditingComplete: widget.onEditingComplete,
-                    onFieldSubmitted: widget.onFieldSubmitted,
-                    textAlign: widget.textAlign ?? TextAlign.start,
-                    focusNode: widget.focusNode,
-                    validator:
-                        widget.validator ??
-                        (value) {
-                          if (value == null || value.isEmpty) {
-                            return isEnglish()
-                                ? "This field can't be empty"
-                                : "لا يمكن ان يكون هذا الحقل فارغا";
-                          }
-                          return null;
-                        },
-                    readOnly: widget.readOnly ?? false,
-                    onTap: widget.onTap,
-                    onTapOutside: widget.onTapOutside,
-                    // initialValue: widget.initvalue,
-                    obscureText: widget.obscureText == true
-                        ? _obscureText
-                        : false,
-                    controller: widget.controller,
-                    keyboardType: widget.keyboardType,
-                    onChanged: widget.onChanged,
-                    maxLength: widget.maxLength,
-                    autofillHints: widget.autofillHints,
-                    maxLines: widget.maxLines,
-                    inputFormatters: widget.inputFormatters,
-                    textInputAction: widget.textInputAction,
-                    autovalidateMode:
-                        widget.autovalidateMode ?? AutovalidateMode.onUnfocus,
-                    decoration: InputDecoration(
-                      errorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(
-                          widget.borderRadius ?? 10.r,
-                        ),
-                        borderSide: BorderSide(color: AppColors.textError),
-                      ),
-                      labelText: widget.labelText,
-                      labelStyle:
-                          widget.labelStyle ??
-                          TextStyles.styleSubtitleMedium14(context),
-                      hintStyle:
-                          widget.hintStyle ??
-                          TextStyles.styleParagraphRegular14(
-                            context,
-                            color: widget.hintColor??Colors.black26.withValues(alpha: 0.5),
+                  child: Container(
+                    height: widget.height,
+                    decoration: BoxDecoration(
+                      boxShadow: widget.boxShadow,
+                    ),
+                    child: TextFormField(
+                      onEditingComplete: widget.onEditingComplete,
+                      onFieldSubmitted: widget.onFieldSubmitted,
+                      textAlign: widget.textAlign ?? TextAlign.start,
+                      focusNode: widget.focusNode,
+                      validator:
+                          widget.validator ??
+                          (value) {
+                            if (value == null || value.isEmpty) {
+                              return isEnglish()
+                                  ? "This field can't be empty"
+                                  : "لا يمكن ان يكون هذا الحقل فارغا";
+                            }
+                            return null;
+                          },
+                      readOnly: widget.readOnly ?? false,
+                      onTap: widget.onTap,
+                      onTapOutside: widget.onTapOutside,
+                      // initialValue: widget.initvalue,
+                      obscureText: widget.obscureText == true
+                          ? _obscureText
+                          : false,
+                      controller: widget.controller,
+                      keyboardType: widget.keyboardType,
+                      onChanged: widget.onChanged,
+                      maxLength: widget.maxLength,
+                      autofillHints: widget.autofillHints,
+                      maxLines: widget.maxLines,
+                      inputFormatters: widget.inputFormatters,
+                      textInputAction: widget.textInputAction,
+                      autovalidateMode:
+                          widget.autovalidateMode ?? AutovalidateMode.onUnfocus,
+                      decoration: InputDecoration(
+                        errorBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(
+                            widget.borderRadius ?? 10.r,
                           ),
-                      hintMaxLines: widget.hintMaxLine ?? 500,
-                      floatingLabelStyle:
-                          widget.floatingLabelStyle ??
-                          TextStyles.styleSubtitleMedium10(context),
-                      hintText: widget.hintText,
-                      prefixIcon: widget.prefixIcon,
-                      filled: widget.isFill ?? true,
-                      errorStyle: TextStyle(
-                        color: AppColors.textError,
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      errorMaxLines: 1,
-                      prefixIconConstraints: const BoxConstraints(
-                        minWidth: 50,
-                        minHeight: 0,
-                      ),
-                      suffixIconConstraints: const BoxConstraints(
-                        minWidth: 40,
-                        minHeight: 0,
-                      ),
-                      fillColor:
-                          widget.fillColor ??
-                          DynamicColors.textColorInverse(context),
-                      focusColor:
-                          widget.focusColor ??
-                          DynamicColors.textColorInverse(context),
-                      contentPadding: EdgeInsets.only(
-                        left: widget.lPadding ?? 15.w,
-                        right: widget.rPadding ?? 15.w,
-                        top: widget.tPadding ?? 8.h,
-                        bottom: widget.bPadding ?? 8.h,
-                      ),
-                      focusedBorder: (widget.enabled == true)
-                          ? UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color:
-                                    widget.focusColor ??
-                                    AppColors.lightSecondary,
-                              ),
-                            )
-                          : OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(
-                                widget.borderRadius ?? 10.r,
-                              ),
-                              borderSide: BorderSide(
-                                color:
-                                    widget.focusColor ??
-                                    AppColors.lightSecondary,
-                              ),
-                            ),
-                      suffixIcon: widget.obscureText == true
-                          ? IconButton(
-                              icon: Icon(
-                                _obscureText
-                                    ? Icons.visibility_off_outlined
-                                    : Icons.visibility_outlined,
-                                color: Colors.black.withValues(alpha: 0.6),
-                                size: 26.h,
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  _obscureText = !_obscureText;
-                                });
-                              },
-                            )
-                          : widget.suffixIcon,
-                      enabledBorder: (widget.enabled == true)
-                          ? UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color:
-                                    widget.enabledColor ?? Colors.transparent,
-                              ),
-                            )
-                          : OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(
-                                widget.borderRadius ?? 10.r,
-                              ),
-                              borderSide: BorderSide(
-                                color: widget.enabledColor ?? Color(0xffD8DADC),
-                              ),
-                            ),
-                      disabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(
-                          widget.borderRadius ?? 40.r,
+                          borderSide: BorderSide(color: AppColors.textError),
                         ),
-                        borderSide: BorderSide(
-                          color:
-                              widget.enabledColor ?? AppColors.lightSecondary,
-                        ),
-                      ),
-                      border: (widget.enabled == true)
-                          ? UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color:
-                                    widget.enabledColor ??
-                                    AppColors.lightSecondary,
-                              ),
-                            )
-                          : OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(
-                                widget.borderRadius ?? 10.r,
-                              ),
-                              borderSide: BorderSide(
-                                color: widget.enabledColor ?? Color(0xffD8DADC),
-                              ),
+                        labelText: widget.labelText,
+                        labelStyle:
+                            widget.labelStyle ??
+                            TextStyles.styleSubtitleMedium14(context),
+                        hintStyle:
+                            widget.hintStyle ??
+                            TextStyles.styleParagraphRegular14(
+                              context,
+                              color: widget.hintColor??Colors.black26.withValues(alpha: 0.5),
                             ),
-                      counterText: widget.showCounter == true ? null : "",
-                      counterStyle: const TextStyle(fontSize: 0, height: 0),
+                        hintMaxLines: widget.hintMaxLine ?? 500,
+                        floatingLabelStyle:
+                            widget.floatingLabelStyle ??
+                            TextStyles.styleSubtitleMedium10(context),
+                        hintText: widget.hintText,
+                        prefixIcon: widget.prefixIcon,
+                        filled: widget.isFill ?? true,
+                        errorStyle: TextStyle(
+                          color: AppColors.textError,
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        errorMaxLines: 1,
+                        prefixIconConstraints: const BoxConstraints(
+                          minWidth: 50,
+                          minHeight: 0,
+                        ),
+                        suffixIconConstraints: const BoxConstraints(
+                          minWidth: 40,
+                          minHeight: 0,
+                        ),
+                        fillColor:
+                            widget.fillColor ??
+                            DynamicColors.textColorInverse(context),
+                        focusColor:
+                            widget.focusColor ??
+                            DynamicColors.textColorInverse(context),
+                        contentPadding: EdgeInsets.only(
+                          left: widget.lPadding ?? 15.w,
+                          right: widget.rPadding ?? 15.w,
+                          top: widget.tPadding ?? 8.h,
+                          bottom: widget.bPadding ?? 8.h,
+                        ),
+                        focusedBorder: (widget.enabled == true)
+                            ? UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color:
+                                      widget.focusColor ??
+                                      AppColors.lightSecondary,
+                                ),
+                              )
+                            : OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(
+                                  widget.borderRadius ?? 10.r,
+                                ),
+                                borderSide: BorderSide(
+                                  color:
+                                      widget.focusColor ??
+                                      AppColors.lightSecondary,
+                                ),
+                              ),
+                        suffixIcon: widget.obscureText == true
+                            ? IconButton(
+                                icon: Icon(
+                                  _obscureText
+                                      ? Icons.visibility_off_outlined
+                                      : Icons.visibility_outlined,
+                                  color: Colors.black.withValues(alpha: 0.6),
+                                  size: 26.h,
+                                ),
+                                onPressed: () {
+                                  setState(() {
+                                    _obscureText = !_obscureText;
+                                  });
+                                },
+                              )
+                            : widget.suffixIcon,
+                        enabledBorder: (widget.enabled == true)
+                            ? UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color:
+                                      widget.enabledColor ?? Colors.transparent,
+                                ),
+                              )
+                            : OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(
+                                  widget.borderRadius ?? 10.r,
+                                ),
+                                borderSide: BorderSide(
+                                  color: widget.enabledColor ?? Color(0xffD8DADC),
+                                ),
+                              ),
+                        disabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(
+                            widget.borderRadius ?? 40.r,
+                          ),
+                          borderSide: BorderSide(
+                            color:
+                                widget.enabledColor ?? AppColors.lightSecondary,
+                          ),
+                        ),
+                        border: (widget.enabled == true)
+                            ? UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color:
+                                      widget.enabledColor ??
+                                      AppColors.lightSecondary,
+                                ),
+                              )
+                            : OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(
+                                  widget.borderRadius ?? 10.r,
+                                ),
+                                borderSide: BorderSide(
+                                  color: widget.enabledColor ?? Color(0xffD8DADC),
+                                ),
+                              ),
+                        counterText: widget.showCounter == true ? null : "",
+                        counterStyle: const TextStyle(fontSize: 0, height: 0),
+                      ),
                     ),
                   ),
                 ),

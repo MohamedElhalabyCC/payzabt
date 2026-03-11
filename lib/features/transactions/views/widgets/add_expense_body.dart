@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 
 import '../../../../config/export/export.dart';
 import '../../../../core/widgets/custom_drop_down_menu.dart';
+import 'categories_bottom_sheet.dart';
 
 class AddExpenseBody extends StatefulWidget {
   const AddExpenseBody({super.key});
@@ -50,7 +51,14 @@ class _AddExpenseBodyState extends State<AddExpenseBody> {
                   title: LocaleKeys.category.tr(),
                   titleColor: Color(0xff2F9A88),
                   borderRadius: 12,
-                  onTap: () {},
+                  onTap: ()=> showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true, // Allows the sheet to expand beyond half-screen
+                    useSafeArea: true,
+                    backgroundColor: Colors.transparent,
+                    builder:
+                        (_) => CategoriesBottomSheet(),
+                  ),
                   validator: (_) {
                     return;
                   },

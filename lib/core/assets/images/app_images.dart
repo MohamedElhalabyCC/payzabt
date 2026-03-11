@@ -126,6 +126,10 @@ class Assets {
   /// assets/images/svg/savings_icon.svg
   static const String imagesSvgSavingsIcon = "assets/images/svg/savings_icon.svg";
 
+  /// Assets for imagesSvgSearchIcon
+  /// assets/images/svg/search_icon.svg
+  static const String imagesSvgSearchIcon = "assets/images/svg/search_icon.svg";
+
   /// Assets for imagesSvgSettingsIcon
   /// assets/images/svg/settings_icon.svg
   static const String imagesSvgSettingsIcon = "assets/images/svg/settings_icon.svg";

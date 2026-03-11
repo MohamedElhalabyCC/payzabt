@@ -428,6 +428,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_morphing_icons:
+    dependency: "direct main"
+    description:
+      name: flutter_morphing_icons
+      sha256: b1a484fb2f6cf1543388dd407010b8980dd57c95dfd619c16e8dde106cae3478
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.0"
   flutter_native_splash:
     dependency: "direct main"
     description:
@@ -942,14 +950,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.2.1"
-  persistent_bottom_nav_bar:
-    dependency: "direct main"
-    description:
-      name: persistent_bottom_nav_bar
-      sha256: "6aa9b97ced1abd92c90cedd1997d34ea0b35c3ded762ac6063baccc299b0c4c5"
-      url: "https://pub.dev"
-    source: hosted
-    version: "6.2.1"
   petitparser:
     dependency: transitive
     description:

@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 
 import '../../../../config/export/export.dart';
+import 'categories_bottom_sheet.dart';
 
 class AddIncomeBody extends StatefulWidget {
   const AddIncomeBody({super.key});
@@ -42,7 +43,14 @@ class _AddIncomeBodyState extends State<AddIncomeBody> {
           title: LocaleKeys.category.tr(),
           titleColor: Color(0xff2F9A88),
           borderRadius: 12,
-          onTap: () {},
+          onTap: ()=> showModalBottomSheet(
+            context: context,
+            isScrollControlled: true, // Allows the sheet to expand beyond half-screen
+            useSafeArea: true,
+            backgroundColor: Colors.transparent,
+            builder:
+                (_) => CategoriesBottomSheet(),
+          ),
           validator: (_) {
             return;
           },
