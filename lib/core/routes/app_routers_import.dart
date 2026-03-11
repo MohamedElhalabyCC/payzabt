@@ -9,8 +9,8 @@ class AppRoute {
   static const String signUpView = '/signUpView';
   static const String savingsView = '/SavingsView';
   static const String customNavBar = '/customNavBar';
-  static const String specialityView = '/specialityView';
-  static const String specialityDoctorsView = '/SpecialityDoctorsView';
+  static const String transactionsView = '/TransactionsView';
+  static const String addTransactionScreen = '/AddTransactionScreen';
   static const String privacyView = 'PrivacyView';
   static const String walletView = 'WalletView';
   static const String personalInformationView = 'PersonalInformationView';

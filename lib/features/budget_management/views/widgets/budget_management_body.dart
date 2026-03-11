@@ -23,7 +23,7 @@ class _BudgetManagementContainerState extends State<BudgetManagementContainer> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          (MediaQuery.of(context).size.height * 0.22).sizeBoxH,
+          (MediaQuery.of(context).size.height * 0.25).sizeBoxH,
           AppMainContainer(
             hPadding: 18.w,
             child: Column(
@@ -106,7 +106,7 @@ class _BudgetManagementContainerState extends State<BudgetManagementContainer> {
                   validator: (_) {
                     return;
                   },
-                  hintStyle: TextStyles.styleParagraphRegular24(context,color: Colors.black26.withValues(alpha: 0.5)),
+                  hintStyle: TextStyles.styleParagraphRegular16(context,color: Colors.black26.withValues(alpha: 0.5)).copyWith(fontSize: 18),
                   maxLength: widget.index == 0 ? 2 : 10,
                   showCounter: false,
                   tPadding: 0,

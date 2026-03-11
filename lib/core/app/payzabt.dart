@@ -11,7 +11,7 @@ class Payzabt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(440, 956),
+      designSize: const Size(393, 852),
       minTextAdapt: true,
       builder: (context, child) => GestureDetector(
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),

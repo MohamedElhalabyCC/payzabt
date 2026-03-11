@@ -22,14 +22,14 @@ class CustomDropDownMenu<T> extends StatelessWidget {
     this.icon,
     this.fillColor,
     this.title,
-    this.titleStyle, this.height, this.hintStyle,
+    this.titleStyle, this.height, this.hintStyle, this.titleColor,
   });
 
   final String hintText;
   final String? title; // ⭐ عنوان فوق الدروب داون
   final TextStyle? titleStyle,hintStyle; // ⭐ ستايل العنوان
   final double? borderRadius,height;
-  final Color? enabledColor, focusColor, iconColor, fillColor;
+  final Color? enabledColor, focusColor, iconColor, fillColor,titleColor;
   final T? value;
   final String? labelText;
   final List<T> dropdownMenuEntries;
@@ -54,14 +54,18 @@ class CustomDropDownMenu<T> extends StatelessWidget {
             padding: EdgeInsets.only(bottom: 6.h),
             child: AppText(
               text: title!,
-              appTextStyle: titleStyle ?? TextStyles.styleMedium16(context),
+              appTextStyle: titleStyle ?? TextStyle(
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w400,
+                color: titleColor??AppColors.lightSecondary,
+              ),
             ),
           ),
 
         /// ========== الدروب داون ==========
         DropdownButtonFormField2<T>(
           menuItemStyleData: MenuItemStyleData(
-            padding: EdgeInsets.symmetric(horizontal: 4),
+            padding: EdgeInsetsDirectional.only(start: 4.w),
           ),
           dropdownStyleData: DropdownStyleData(
             decoration: BoxDecoration(
@@ -70,33 +74,34 @@ class CustomDropDownMenu<T> extends StatelessWidget {
             ),
             elevation: 1,
             maxHeight: 200.h,
+            padding: EdgeInsets.symmetric(horizontal: 12.w)
           ),
           buttonStyleData: ButtonStyleData(padding: EdgeInsets.zero),
           alignment: AlignmentDirectional.centerStart,
           isDense: true,
           isExpanded: true,
           iconStyleData: IconStyleData(
-            icon: Icon(icon ?? Icons.keyboard_arrow_down, color: Colors.black),
+            icon: Icon(icon ?? Icons.keyboard_arrow_down, color: iconColor??Colors.black,size: 22,),
           ),
           focusNode: FocusNode(),
           hint: AppText(
             text: hintText,
             appTextStyle: hintStyle??TextStyles.styleParagraphRegular14(
               context,
-              color: DynamicColors.textGreyed(context),
+              color: Colors.black26.withValues(alpha: 0.5),
             ),
           ),
           decoration: InputDecoration(
             constraints: BoxConstraints(maxHeight: height??80),
             contentPadding: EdgeInsets.only(
-              left: 12.w,
-              right: 12.w,
+              left: 0.w,
+              right: 6.w,
               top: 2.h,
               bottom: 2.h,
             ),
             hintStyle: TextStyles.styleParagraphRegular14(
               context,
-              color: DynamicColors.textGreyed(context),
+              color: Colors.black26.withValues(alpha: 0.5),
             ),
             hintMaxLines: 1,
             floatingLabelStyle: TextStyles.styleSubtitleMedium14(context),

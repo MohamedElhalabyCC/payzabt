@@ -9,9 +9,11 @@ class TransactionCard extends StatelessWidget {
     required this.date,
     required this.cost,
     required this.method,
+    this.color,
   });
 
   final String title, date, cost, method;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,7 @@ class TransactionCard extends StatelessWidget {
           padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(18),
-            color: Color(0xFFDAF0F6),
+            color: color ?? Color(0xFFDAF0F6),
           ),
           child: AppImageView(Assets.imagesSvgBill, height: 32.h, width: 32.w),
         ),

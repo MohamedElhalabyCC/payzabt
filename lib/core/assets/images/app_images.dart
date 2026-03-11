@@ -66,6 +66,10 @@ class Assets {
   /// assets/images/svg/envelops_icon.svg
   static const String imagesSvgEnvelopsIcon = "assets/images/svg/envelops_icon.svg";
 
+  /// Assets for imagesSvgExpensesIcon
+  /// assets/images/svg/expenses_icon.svg
+  static const String imagesSvgExpensesIcon = "assets/images/svg/expenses_icon.svg";
+
   /// Assets for imagesSvgGiftBox
   /// assets/images/svg/gift_box.svg
   static const String imagesSvgGiftBox = "assets/images/svg/gift_box.svg";
@@ -157,6 +161,10 @@ class Assets {
   /// Assets for imagesSvgTravelAndTourism
   /// assets/images/svg/travel_and_tourism.svg
   static const String imagesSvgTravelAndTourism = "assets/images/svg/travel_and_tourism.svg";
+
+  /// Assets for imagesSvgWalletIncome
+  /// assets/images/svg/wallet_income.svg
+  static const String imagesSvgWalletIncome = "assets/images/svg/wallet_income.svg";
 
   /// Assets for imagesSvgWeightlifting
   /// assets/images/svg/weightlifting.svg

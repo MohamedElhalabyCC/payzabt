@@ -1,5 +1,4 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:payzabt/features/budget_management/logic/budget_management_cubit.dart';
 import 'package:payzabt/features/budget_management/views/widgets/tips_container.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -53,7 +52,7 @@ class _BudgetManagementViewState extends State<BudgetManagementView> {
               SafeArea(
                 child: Container(
                   width: double.infinity,
-                  height: MediaQuery.of(context).size.height * 0.3,
+                  height: MediaQuery.of(context).size.height * 0.32,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.vertical(
                       bottom: Radius.circular(24),
@@ -128,57 +127,62 @@ class _BudgetManagementViewState extends State<BudgetManagementView> {
                   );
                 },
               ),
-              Align(
-                alignment: AlignmentGeometry.bottomCenter,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    AppButton(
-                      height: 50.h,
-                      background: AppColors.lightPrimary,
-                      onTap: () {
-                        if (counter.value < 3) {
-                          counter.value++;
-                        } else {
-                          // Final step logic if any, or navigation
-                          context.pushNamed(AppRoute.savingsView);
-                        }
-                      },
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          AppText(
-                            text: LocaleKeys.continue_.tr(),
+              ValueListenableBuilder(
+                valueListenable: counter,
+                builder: (context, value, child) {
+                  return Align(
+                    alignment: AlignmentGeometry.bottomCenter,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        AppButton(
+                          height: 50.h,
+                          background: AppColors.lightPrimary,
+                          onTap: () {
+                            if (counter.value < 3) {
+                              counter.value++;
+                            } else {
+                              // Final step logic if any, or navigation
+                              context.pushNamed(AppRoute.savingsView);
+                            }
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              AppText(
+                                text: LocaleKeys.continue_.tr(),
+                                appTextStyle: TextStyles.styleParagraphRegular16(
+                                  context,
+                                  color: AppColors.textWhite,
+                                ).copyWith(fontSize: 18.sp),
+                              ),
+                              4.sizeBoxW,
+                              Icon(
+                                Icons.arrow_forward,
+                                color: Colors.white,
+                                size: 16,
+                              ),
+                            ],
+                          ),
+                        ).paddingSymmetric(horizontal: 40.w, vertical: 8.h),
+                        8.sizeBoxH,
+                        if (counter.value == 3)...[GestureDetector(
+                          onTap: () {
+                            context.pushNamed(AppRoute.bottomNavBarScreen);
+                          },
+                          child: AppText(
+                            text: LocaleKeys.skipForNow.tr(),
                             appTextStyle: TextStyles.styleParagraphRegular16(
                               context,
-                              color: AppColors.textWhite,
-                            ).copyWith(fontSize: 18.sp),
+                              color: Color(0xff6A7282),
+                            ),
                           ),
-                          4.sizeBoxW,
-                          Icon(
-                            Icons.arrow_forward,
-                            color: Colors.white,
-                            size: 16,
-                          ),
-                        ],
-                      ),
-                    ).paddingSymmetric(horizontal: 40.w, vertical: 8.h),
-                    8.sizeBoxH,
-                    if (counter.value == 3)...[GestureDetector(
-                      onTap: () {
-                        context.pushNamed(AppRoute.bottomNavBarScreen);
-                      },
-                      child: AppText(
-                        text: LocaleKeys.skipForNow.tr(),
-                        appTextStyle: TextStyles.styleParagraphRegular16(
-                          context,
-                          color: Color(0xff6A7282),
                         ),
-                      ),
+                        12.sizeBoxH],
+                      ],
                     ),
-                    12.sizeBoxH],
-                  ],
-                ),
+                  );
+                }
               ),
             ],
           );

@@ -15,7 +15,16 @@ abstract class  LocaleKeys {
   static const newSavingAmount = 'newSavingAmount';
   static const viewAll = 'viewAll';
   static const hi = 'hi';
+  static const addIncomeTitle = 'addIncomeTitle';
+  static const addIncomeAmount = 'addIncomeAmount';
+  static const chooseCategory = 'chooseCategory';
+  static const autoAddedEveryMonth = 'autoAddedEveryMonth';
   static const welcome = 'welcome';
+  static const addExtraNote = 'addExtraNote';
+  static const transactions = 'transactions';
+  static const reviewRecentActivity = 'reviewRecentActivity';
+  static const addExpensesTitle = 'addExpensesTitle';
+  static const addExpensesAmount = 'addExpensesAmount';
   static const recentTransactions = 'recentTransactions';
   static const allocatePortionToGoal = 'allocatePortionToGoal';
   static const foodSpendingIncreaseInsight = 'foodSpendingIncreaseInsight';

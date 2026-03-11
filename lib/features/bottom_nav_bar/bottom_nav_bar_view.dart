@@ -93,7 +93,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView>
         child: screens[_bottomNavIndex],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () =>context.pushNamed(AppRoute.addTransactionScreen),
         shape: CircleBorder(),
         highlightElevation: 0,
         backgroundColor: Colors.transparent,

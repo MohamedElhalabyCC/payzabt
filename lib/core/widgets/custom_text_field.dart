@@ -22,7 +22,7 @@ class CustomTextField extends StatefulWidget {
   final TextStyle? floatingLabelStyle;
   final Widget? suffixIcon;
   final bool? obscureText;
-  final Color? enabledColor, cursorColor, fillColor, focusColor,titleColor;
+  final Color? enabledColor, cursorColor, fillColor, focusColor,titleColor,hintColor;
   final List<String>? autofillHints;
   final TextInputType? keyboardType;
   final bool? autoCorrect, isFill, showCounter;
@@ -101,7 +101,7 @@ class CustomTextField extends StatefulWidget {
     this.onCountryChanged,
     this.onEditingComplete,
     this.onTapOutside,
-    this.initvalue = '',
+    this.initvalue = '', this.hintColor,
   });
 
   @override
@@ -234,7 +234,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                           widget.hintStyle ??
                           TextStyles.styleParagraphRegular14(
                             context,
-                            color: Colors.black26.withValues(alpha: 0.5),
+                            color: widget.hintColor??Colors.black26.withValues(alpha: 0.5),
                           ),
                       hintMaxLines: widget.hintMaxLine ?? 500,
                       floatingLabelStyle:
