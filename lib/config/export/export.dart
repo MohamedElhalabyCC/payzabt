@@ -66,3 +66,6 @@ export 'package:payzabt/features/savings/logic/savings_cubit.dart';
 export 'package:payzabt/features/transactions/data/api/transactions_api_services.dart';
 export 'package:payzabt/features/transactions/data/repo/transactions_repo.dart';
 export 'package:payzabt/features/transactions/logic/transactions_cubit.dart';
+export 'package:payzabt/features/envelops/data/api/envelops_api_services.dart';
+export 'package:payzabt/features/envelops/data/repo/envelops_repo.dart';
+export 'package:payzabt/features/envelops/logic/envelops_cubit.dart';

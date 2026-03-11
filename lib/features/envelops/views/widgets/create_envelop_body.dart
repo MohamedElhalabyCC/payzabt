@@ -1,16 +1,16 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:payzabt/features/transactions/views/widgets/categories_bottom_sheet.dart';
 
 import '../../../../config/export/export.dart';
-import 'categories_bottom_sheet.dart';
 
-class AddIncomeBody extends StatefulWidget {
-  const AddIncomeBody({super.key});
+class CreateEnvelopBody extends StatefulWidget {
+  const CreateEnvelopBody({super.key});
 
   @override
-  State<AddIncomeBody> createState() => _AddIncomeBodyState();
+  State<CreateEnvelopBody> createState() => _CreateEnvelopBodyState();
 }
 
-class _AddIncomeBodyState extends State<AddIncomeBody> {
+class _CreateEnvelopBodyState extends State<CreateEnvelopBody> {
   bool repeatEveryMonth = false;
 
   @override
@@ -20,18 +20,9 @@ class _AddIncomeBodyState extends State<AddIncomeBody> {
       children: [
         12.sizeBoxH,
         CustomTextField(
-          hintText: LocaleKeys.addIncomeTitle.tr(),
-          fillColor: Colors.white,
-          title: LocaleKeys.title.tr(),
-          titleColor: Color(0xff2F9A88),
-          borderRadius: 12,
-        ),
-        12.sizeBoxH,
-        CustomTextField(
           hintText: LocaleKeys.addIncomeAmount.tr(),
           fillColor: Colors.white,
           title: LocaleKeys.amount.tr(),
-          titleColor: Color(0xff2F9A88),
           borderRadius: 12,
         ),
         12.sizeBoxH,
@@ -39,15 +30,14 @@ class _AddIncomeBodyState extends State<AddIncomeBody> {
           hintText: LocaleKeys.chooseCategory.tr(),
           fillColor: Colors.white,
           title: LocaleKeys.category.tr(),
-          titleColor: Color(0xff2F9A88),
           borderRadius: 12,
-          onTap: ()=> showModalBottomSheet(
+          onTap: () => showModalBottomSheet(
             context: context,
-            isScrollControlled: true, // Allows the sheet to expand beyond half-screen
+            isScrollControlled: true,
+            // Allows the sheet to expand beyond half-screen
             useSafeArea: true,
             backgroundColor: Colors.transparent,
-            builder:
-                (_) => CategoriesBottomSheet(),
+            builder: (_) => CategoriesBottomSheet(),
           ),
           validator: (_) {
             return;
@@ -65,12 +55,11 @@ class _AddIncomeBodyState extends State<AddIncomeBody> {
         12.sizeBoxH,
         _buildRepeatSwitch(context),
         24.sizeBoxH,
-        AppButton(
-          title: LocaleKeys.addIncome.tr(),
-          background: Color(0xff2F9A88),
-        ),
+        Spacer(),
+        AppButton(title: LocaleKeys.createEnvelope.tr()),
+        30.sizeBoxH,
       ],
-    );
+    ).paddingOnly(right: 24, left: 24, top: 24);
   }
 
   Widget _buildRepeatSwitch(BuildContext context) {
@@ -84,24 +73,24 @@ class _AddIncomeBodyState extends State<AddIncomeBody> {
               text: LocaleKeys.repeatEveryMonth.tr(),
               appTextStyle: TextStyles.styleSemiBold14(
                 context,
-                color: Color(0xff2F9A88),
+                color: AppColors.lightSecondary,
               ),
             ),
             AppText(
               text: LocaleKeys.autoAddedEveryMonth.tr(),
               appTextStyle: TextStyles.styleParagraphRegular12(
                 context,
-                color: Color(0xff2F9A88),
+                color: AppColors.lightSecondary,
               ),
             ),
           ],
         ),
         Switch(
           value: repeatEveryMonth,
-          activeColor: Color(0xff2F9A88),
+          activeColor: AppColors.lightSecondary,
           inactiveTrackColor: Colors.white,
-          inactiveThumbColor: Color(0xff2F9A88),
-          trackOutlineColor: WidgetStatePropertyAll(Color(0xff2F9A88)),
+          inactiveThumbColor: AppColors.lightSecondary,
+          trackOutlineColor: WidgetStatePropertyAll(AppColors.lightSecondary),
           onChanged: (val) => setState(() => repeatEveryMonth = val),
         ),
       ],

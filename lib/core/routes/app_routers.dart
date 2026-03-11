@@ -4,6 +4,7 @@ import 'package:payzabt/features/auth/views/otp_view.dart';
 import 'package:payzabt/features/auth/views/sign_up_view.dart';
 import 'package:payzabt/features/bottom_nav_bar/bottom_nav_bar_view.dart';
 import 'package:payzabt/features/budget_management/views/budget_management_view.dart';
+import 'package:payzabt/features/envelops/views/edit_envelop_view.dart';
 import 'package:payzabt/features/onboarding/views/onboarding_view.dart';
 import 'package:payzabt/features/savings/views/savings_view.dart';
 import 'package:payzabt/features/splash/splash_view.dart';
@@ -81,6 +82,14 @@ class AppRouter {
           builder: (_) => BlocProvider(
             create: (context) => getIt<TransactionsCubit>(),
             child: AddTransactionScreen(),
+          ),
+        );
+
+      case AppRoute.editEnvelopScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<EnvelopsCubit>(),
+            child: EditEnvelopScreen(),
           ),
         );
 

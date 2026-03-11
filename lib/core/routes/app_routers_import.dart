@@ -11,20 +11,6 @@ class AppRoute {
   static const String customNavBar = '/customNavBar';
   static const String transactionsView = '/TransactionsView';
   static const String addTransactionScreen = '/AddTransactionScreen';
-  static const String privacyView = 'PrivacyView';
-  static const String walletView = 'WalletView';
-  static const String personalInformationView = 'PersonalInformationView';
-  static const String rateDoctorView = '/RateDoctorView';
-  static const String filteringView = '/filteringView';
-  static const String medicalRecordsView = '/MedicalRecordsView';
-  static const String medicineView = '/MedicineView';
-  static const String searchResultsView = '/SearchResultsView';
-  static const String invoiceView = '/InvoiceView';
-  static const String familyMembersView = '/FamilyMembersView';
-  static const String ordersMedicinesView = '/OrdersMedicinesView';
-  static const String supportView = '/SupportView';
-  static const String technicalSupportView = '/TechnicalSupportView';
-  static const String orderDetailsView = '/OrderDetailsView';
-  static const String reservationsView = '/ReservationsView';
-  static const String patientDataView = '/PatientDataView';
+  static const String privacyView = '/PrivacyView';
+  static const String editEnvelopScreen = '/EditEnvelopScreen';
 }

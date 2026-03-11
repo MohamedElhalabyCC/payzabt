@@ -68,7 +68,10 @@ Future<void> setupGetIt() async {
           () => TransactionsCubit(getIt<TransactionsRepo>()));
   getIt.registerLazySingleton<TransactionsRepo>(() => TransactionsApiServices());
 
-
+  ///!MARK: FOR Envelops  ///
+  getIt.registerFactory<EnvelopsCubit>(
+          () => EnvelopsCubit(getIt<EnvelopsRepo>()));
+  getIt.registerLazySingleton<EnvelopsRepo>(() => EnvelopsApiServices());
   // ///!MARK: FOR Profile  ///
   // getIt.registerFactory<ProfileCubit>(() => ProfileCubit(getIt<ProfileRepo>()));
   // getIt.registerLazySingleton<ProfileRepo>(() => ProfileApiServices());

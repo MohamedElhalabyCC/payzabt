@@ -28,6 +28,7 @@ abstract class  LocaleKeys {
   static const recentTransactions = 'recentTransactions';
   static const cash = 'cash';
   static const off = 'off';
+  static const create = 'create';
   static const createCategory = 'createCategory';
   static const selectCategory = 'selectCategory';
   static const allocatePortionToGoal = 'allocatePortionToGoal';
