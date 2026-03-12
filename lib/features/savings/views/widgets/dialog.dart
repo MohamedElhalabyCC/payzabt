@@ -173,6 +173,7 @@ class AllocateToGoalDialogContent extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 24.h, vertical: 24.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
+        color: Colors.white
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,

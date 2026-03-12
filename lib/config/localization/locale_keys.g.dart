@@ -161,6 +161,9 @@ abstract class  LocaleKeys {
   static const deleteGoal = 'deleteGoal';
   static const activeGoals = 'activeGoals';
   static const completed = 'completed';
+  static const createGoal = 'createGoal';
+  static const goalDetails = 'goalDetails';
+  static const remaining = 'remaining';
   static const goalDeleted = 'goalDeleted';
   static const deleteGoalConfirmation = 'deleteGoalConfirmation';
   static const totalSavedTowardGoals = 'totalSavedTowardGoals';

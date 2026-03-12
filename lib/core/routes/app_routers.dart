@@ -5,6 +5,7 @@ import 'package:payzabt/features/auth/views/sign_up_view.dart';
 import 'package:payzabt/features/bottom_nav_bar/bottom_nav_bar_view.dart';
 import 'package:payzabt/features/budget_management/views/budget_management_view.dart';
 import 'package:payzabt/features/envelops/views/edit_envelop_view.dart';
+import 'package:payzabt/features/goals/logic/goals_cubit.dart';
 import 'package:payzabt/features/onboarding/views/onboarding_view.dart';
 import 'package:payzabt/features/savings/views/savings_view.dart';
 import 'package:payzabt/features/splash/splash_view.dart';
@@ -12,6 +13,7 @@ import 'package:payzabt/features/transactions/views/add_transactions_view.dart';
 import 'package:payzabt/features/transactions/views/transactions_view.dart';
 
 import '../../config/export/export.dart';
+import '../../features/goals/views/goal_details_view.dart';
 
 class AppRouter {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
@@ -90,6 +92,19 @@ class AppRouter {
           builder: (_) => BlocProvider(
             create: (context) => getIt<EnvelopsCubit>(),
             child: EditEnvelopScreen(),
+          ),
+        );
+
+      case AppRoute.goalDetailsView:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<GoalsCubit>(),
+            child: GoalDetailsView(
+              title: args[0],
+              budget: args[1],
+              saved: args[2],
+              currency: args[3],
+            ),
           ),
         );
 

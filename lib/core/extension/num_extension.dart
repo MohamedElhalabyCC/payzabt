@@ -62,6 +62,13 @@ extension PaddingExtensions on Widget {
 }
 
 extension NumExtensions on num {
+  String toCommaSeparated() {
+    return toStringAsFixed(0).replaceAllMapped(
+      RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+          (match) => '${match[1]},',
+    );
+  }
+
   String getRatingText() {
     if (this >= 9 && this <= 10) {
       return isEnglish() ? 'Excellent' : 'ممتاز';

@@ -1,12 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:payzabt/features/savings/views/widgets/dialog.dart';
 
 import '../../../../config/export/export.dart';
 import 'goal_card.dart';
+import 'goals_dialog.dart';
 
 class GoalsBody extends StatelessWidget {
   const GoalsBody({super.key});
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +36,7 @@ class GoalsBody extends StatelessWidget {
           ),
           18.sizeBoxH,
           AppButton(
+            onTap: ()=>showAnimatedAutoDismissDialog(context, CreateGoalDialogContent(isEdit: false,)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

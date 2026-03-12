@@ -13,4 +13,5 @@ class AppRoute {
   static const String addTransactionScreen = '/AddTransactionScreen';
   static const String privacyView = '/PrivacyView';
   static const String editEnvelopScreen = '/EditEnvelopScreen';
+  static const String goalDetailsView = '/GoalDetailsView';
 }
