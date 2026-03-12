@@ -4,6 +4,7 @@ import 'package:payzabt/features/envelops/views/envelops_view.dart';
 import 'package:payzabt/features/goals/views/goals_view.dart';
 import 'package:payzabt/features/home/views/home_view.dart';
 import '../../config/export/export.dart';
+import '../settings/views/settings_view.dart';
 
 class BottomNavBarView extends StatefulWidget {
   const BottomNavBarView({super.key});
@@ -24,7 +25,6 @@ class _BottomNavBarViewState extends State<BottomNavBarView>
   late CurvedAnimation borderRadiusCurve;
   late AnimationController _hideBottomBarAnimationController;
 
-  final screens = [HomeView(), EnvelopsScreen(), GoalsView(), Container()];
 
   @override
   void initState() {
@@ -89,6 +89,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView>
 
   @override
   Widget build(BuildContext context) {
+    final screens = [HomeView(), EnvelopsScreen(), GoalsView(), SettingsView()];
     return AppScaffold(
       horizontalPadding: 0,
       verticalPadding: 0,

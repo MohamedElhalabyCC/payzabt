@@ -12,7 +12,6 @@ class AddExpenseBody extends StatefulWidget {
 }
 
 class _AddExpenseBodyState extends State<AddExpenseBody> {
-  bool isIncome = true;
 
   bool repeatEveryMonth = false;
 

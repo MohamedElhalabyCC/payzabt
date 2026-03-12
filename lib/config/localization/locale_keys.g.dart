@@ -164,6 +164,7 @@ abstract class  LocaleKeys {
   static const createGoal = 'createGoal';
   static const goalDetails = 'goalDetails';
   static const remaining = 'remaining';
+  static const settings = 'settings';
   static const goalDeleted = 'goalDeleted';
   static const deleteGoalConfirmation = 'deleteGoalConfirmation';
   static const totalSavedTowardGoals = 'totalSavedTowardGoals';
@@ -171,6 +172,7 @@ abstract class  LocaleKeys {
   static const completedGoals = 'completedGoals';
   static const totalSavings = 'totalSavings';
   static const savingsHistory = 'savingsHistory';
+  static const changeIncome = 'changeIncome';
   static const allocateToGoal = 'allocateToGoal';
   static const editSavings = 'editSavings';
   static const editTotalSavings = 'editTotalSavings';

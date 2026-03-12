@@ -55,7 +55,7 @@ class GoalCard extends StatelessWidget {
           Row(
             children: [
               Text(
-                saved.toStringAsFixed(0),
+                saved.toCommaSeparated(),
                 style: TextStyle(
                   color: Color(0xff009689),
                   fontSize: 20.sp,
@@ -64,7 +64,7 @@ class GoalCard extends StatelessWidget {
                 ),
               ),
               Text(
-                " / ${budget.toStringAsFixed(0)} $currency ",
+                " / ${budget.toCommaSeparated()} $currency ",
                 style: TextStyle(
                   color: AppColors.subText,
                   fontSize: 12.sp,
@@ -179,7 +179,7 @@ class ProgressGoalCard extends StatelessWidget {
               Expanded(
                 child: AppText(
                   text:
-                      "${(cappedPercent * 100).toStringAsFixed(0)}% ${LocaleKeys.completed.tr()}",
+                      "${(cappedPercent * 100).toCommaSeparated()}% ${LocaleKeys.completed.tr()}",
                   appTextStyle: TextStyles.styleParagraphRegular14(
                     context,
                     color: Color(0xff364153),
