@@ -146,6 +146,7 @@ abstract class  LocaleKeys {
   static const createEnvelope = 'createEnvelope';
   static const editEnvelope = 'editEnvelope';
   static const deleteEnvelope = 'deleteEnvelope';
+  static const spent = 'spent';
   static const deleteEnvelopeConfirmation = 'deleteEnvelopeConfirmation';
   static const onTrack = 'onTrack';
   static const budget = 'budget';
@@ -158,6 +159,8 @@ abstract class  LocaleKeys {
   static const goalProgress = 'goalProgress';
   static const editGoal = 'editGoal';
   static const deleteGoal = 'deleteGoal';
+  static const activeGoals = 'activeGoals';
+  static const completed = 'completed';
   static const goalDeleted = 'goalDeleted';
   static const deleteGoalConfirmation = 'deleteGoalConfirmation';
   static const totalSavedTowardGoals = 'totalSavedTowardGoals';

@@ -1,6 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/rendering.dart';
 import 'package:payzabt/features/envelops/views/envelops_view.dart';
+import 'package:payzabt/features/goals/views/goals_view.dart';
 import 'package:payzabt/features/home/views/home_view.dart';
 import '../../config/export/export.dart';
 
@@ -23,7 +24,7 @@ class _BottomNavBarViewState extends State<BottomNavBarView>
   late CurvedAnimation borderRadiusCurve;
   late AnimationController _hideBottomBarAnimationController;
 
-  final screens = [HomeView(), EnvelopsScreen(), Container(), Container()];
+  final screens = [HomeView(), EnvelopsScreen(), GoalsView(), Container()];
 
   @override
   void initState() {

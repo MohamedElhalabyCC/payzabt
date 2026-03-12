@@ -32,6 +32,7 @@ class HomeBody extends StatelessWidget {
             cost: "500",
           ).paddingOnly(bottom: 16.h),
         ),
+        60.sizeBoxH,
       ],
     );
   }

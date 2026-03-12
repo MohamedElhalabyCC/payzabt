@@ -2,6 +2,9 @@ import 'dart:developer';
 
 import 'package:payzabt/core/networking/network/app_api_constants.dart';
 import 'package:payzabt/core/networking/network/dio_consumer.dart';
+import 'package:payzabt/features/goals/data/api/goals_api_services.dart';
+import 'package:payzabt/features/goals/data/repo/goals_repo.dart';
+import 'package:payzabt/features/goals/logic/goals_cubit.dart';
 
 import '../../config/export/export.dart';
 import '../networking/network/base_consumer.dart';
@@ -72,6 +75,13 @@ Future<void> setupGetIt() async {
   getIt.registerFactory<EnvelopsCubit>(
           () => EnvelopsCubit(getIt<EnvelopsRepo>()));
   getIt.registerLazySingleton<EnvelopsRepo>(() => EnvelopsApiServices());
+
+  ///!MARK: FOR Goals  ///
+  getIt.registerFactory<GoalsCubit>(
+          () => GoalsCubit(getIt<GoalsRepo>()));
+  getIt.registerLazySingleton<GoalsRepo>(() => GoalsApiServices());
+
+
   // ///!MARK: FOR Profile  ///
   // getIt.registerFactory<ProfileCubit>(() => ProfileCubit(getIt<ProfileRepo>()));
   // getIt.registerLazySingleton<ProfileRepo>(() => ProfileApiServices());

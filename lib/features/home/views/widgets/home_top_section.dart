@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../../../../config/export/export.dart';
 
@@ -13,11 +14,11 @@ class HomeTopSection extends StatelessWidget {
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(24)),
         gradient: AppColors.appGradient1,
       ),
-      child: SafeArea(
+      child: SafeArea(bottom: false,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            8.sizeBoxH,
+            4.sizeBoxH,
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,16 +36,9 @@ class HomeTopSection extends StatelessWidget {
                 ).paddingVerticalOnly(8),
               ],
             ),
-            20.sizeBoxH,
+            12.sizeBoxH,
             AppText(
-              text: "${LocaleKeys.hi.tr()} Ahmed Hassan,",
-              appTextStyle: TextStyles.styleParagraphRegular24(
-                context,
-                color: AppColors.textWhite,
-              ).copyWith(fontSize: 20.sp, fontWeight: FontWeight.w500),
-            ),
-            AppText(
-              text: LocaleKeys.welcome.tr(),
+              text: "${LocaleKeys.hi.tr()} Ahmed Hassan,\n${LocaleKeys.welcome.tr()}",
               appTextStyle: TextStyles.styleParagraphRegular24(
                 context,
                 color: AppColors.textWhite,
@@ -69,24 +63,21 @@ class HomeTopSection extends StatelessWidget {
                       children: [
                         AppText(
                           text: LocaleKeys.monthlyIncome.tr(),
-                          appTextStyle:
-                          TextStyles.styleParagraphRegular12(
+                          appTextStyle: TextStyles.styleParagraphRegular12(
                             context,
                             color: AppColors.textWhite,
                           ),
                         ),
                         AppText(
                           text: "20,000",
-                          appTextStyle:
-                          TextStyles.styleParagraphRegular24(
+                          appTextStyle: TextStyles.styleParagraphRegular24(
                             context,
                             color: AppColors.textWhite,
                           ).copyWith(fontSize: 20.sp),
                         ),
                         AppText(
                           text: LocaleKeys.egp.tr(),
-                          appTextStyle:
-                          TextStyles.styleParagraphRegular12(
+                          appTextStyle: TextStyles.styleParagraphRegular12(
                             context,
                             color: AppColors.textWhite,
                           ),
@@ -112,24 +103,21 @@ class HomeTopSection extends StatelessWidget {
                       children: [
                         AppText(
                           text: LocaleKeys.totalSavings.tr(),
-                          appTextStyle:
-                          TextStyles.styleParagraphRegular12(
+                          appTextStyle: TextStyles.styleParagraphRegular12(
                             context,
                             color: AppColors.textWhite,
                           ),
                         ),
                         AppText(
                           text: "42,000",
-                          appTextStyle:
-                          TextStyles.styleParagraphRegular24(
+                          appTextStyle: TextStyles.styleParagraphRegular24(
                             context,
                             color: AppColors.textWhite,
                           ).copyWith(fontSize: 20.sp),
                         ),
                         AppText(
                           text: LocaleKeys.egp.tr(),
-                          appTextStyle:
-                          TextStyles.styleParagraphRegular12(
+                          appTextStyle: TextStyles.styleParagraphRegular12(
                             context,
                             color: AppColors.textWhite,
                           ),
@@ -160,7 +148,35 @@ class HomeTopSection extends StatelessWidget {
                 ),
               ],
             ),
-            36.sizeBoxH,
+            12.sizeBoxH,
+            AppText(
+              text: LocaleKeys.spent.tr(),
+              appTextStyle: TextStyles.styleParagraphRegular12(
+                context,
+                color: AppColors.textWhite,
+              ).copyWith(fontWeight: FontWeight.w500),
+            ),
+            6.sizeBoxH,
+            LinearPercentIndicator(
+              lineHeight: 8.0,
+              animation: true,
+              animationDuration: 1000,
+              percent: 0.7,
+              barRadius: const Radius.circular(5.0),
+              progressColor: const Color(0xff0043CE),
+              backgroundColor: const Color(0xFFE5E7EB),
+              padding: EdgeInsets.zero,
+            ),
+            6.sizeBoxH,
+            Text(
+              "9,000 ${LocaleKeys.egp.tr()} / 15,0000 ${LocaleKeys.egp.tr()} ${LocaleKeys.budget.tr()}",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w400, // Regular weight
+              ),
+            ),
+            20.sizeBoxH,
           ],
         ).paddingOnly(top: 14.h, left: 20.w, right: 20.w),
       ),

@@ -170,6 +170,10 @@ class Assets {
   /// assets/images/svg/travel_and_tourism.svg
   static const String imagesSvgTravelAndTourism = "assets/images/svg/travel_and_tourism.svg";
 
+  /// Assets for imagesSvgTrendUp
+  /// assets/images/svg/TrendUp.svg
+  static const String imagesSvgTrendUp = "assets/images/svg/TrendUp.svg";
+
   /// Assets for imagesSvgWalletIncome
   /// assets/images/svg/wallet_income.svg
   static const String imagesSvgWalletIncome = "assets/images/svg/wallet_income.svg";
