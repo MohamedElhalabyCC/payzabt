@@ -29,11 +29,14 @@ class HomeTopSection extends StatelessWidget {
                   fit: BoxFit.fitWidth,
                 ),
                 12.sizeBoxW,
-                AppImageView(
-                  Assets.imagesSvgBellRinging,
-                  width: 32.w,
-                  height: 32.h,
-                ).paddingVerticalOnly(8),
+                InkWell(
+                  onTap: ()=>context.pushNamed(AppRoute.notificationsView),
+                  child: AppImageView(
+                    Assets.imagesSvgBellRinging,
+                    width: 32.w,
+                    height: 32.h,
+                  ).paddingVerticalOnly(8),
+                ),
               ],
             ),
             12.sizeBoxH,

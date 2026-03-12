@@ -6,6 +6,7 @@ import 'package:payzabt/features/bottom_nav_bar/bottom_nav_bar_view.dart';
 import 'package:payzabt/features/budget_management/views/budget_management_view.dart';
 import 'package:payzabt/features/envelops/views/edit_envelop_view.dart';
 import 'package:payzabt/features/goals/logic/goals_cubit.dart';
+import 'package:payzabt/features/notifications/views/notifications_view.dart';
 import 'package:payzabt/features/onboarding/views/onboarding_view.dart';
 import 'package:payzabt/features/savings/views/savings_view.dart';
 import 'package:payzabt/features/splash/splash_view.dart';
@@ -105,6 +106,13 @@ class AppRouter {
               saved: args[2],
               currency: args[3],
             ),
+          ),
+        );
+      case AppRoute.notificationsView:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<NotificationsCubit>(),
+            child: NotificationsView(),
           ),
         );
 

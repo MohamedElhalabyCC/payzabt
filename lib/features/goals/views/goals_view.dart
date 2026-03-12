@@ -1,5 +1,4 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:payzabt/core/widgets/arrow_back_widget.dart';
 import 'package:payzabt/features/goals/views/widgets/completed_goals.dart';
 import 'package:payzabt/features/goals/views/widgets/goals_body.dart';
 
@@ -51,34 +50,26 @@ class _GoalsViewState extends State<GoalsView> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       8.sizeBoxH,
-                      Stack(
-                        children: [
-                          Align(
-                            alignment: AlignmentDirectional.topStart,
-                            child: const ArrowBackWidget(),
-                          ),
-                          Align(
-                            alignment: Alignment.bottomCenter,
-                            child: Column(
-                              children: [
-                                AppText(
-                                  text: LocaleKeys.goals.tr(),
-                                  appTextStyle: TextStyles.styleParagraphRegular16(
-                                    context,
-                                    color: AppColors.textWhite,
-                                  ).copyWith(fontWeight: FontWeight.w500),
-                                ),
-                                AppText(
-                                  text: LocaleKeys.trackProgress.tr(),
-                                  appTextStyle: TextStyles.styleParagraphRegular12(
-                                    context,
-                                    color: AppColors.textWhite,
-                                  ),
-                                ),
-                              ],
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Column(
+                          children: [
+                            AppText(
+                              text: LocaleKeys.goals.tr(),
+                              appTextStyle: TextStyles.styleParagraphRegular16(
+                                context,
+                                color: AppColors.textWhite,
+                              ).copyWith(fontWeight: FontWeight.w500),
                             ),
-                          ),
-                        ],
+                            AppText(
+                              text: LocaleKeys.trackProgress.tr(),
+                              appTextStyle: TextStyles.styleParagraphRegular12(
+                                context,
+                                color: AppColors.textWhite,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       20.sizeBoxH,
                       Container(

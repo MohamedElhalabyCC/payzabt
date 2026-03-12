@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:payzabt/core/networking/network/app_api_constants.dart';
 import 'package:payzabt/core/networking/network/dio_consumer.dart';
 
-
 import '../../config/export/export.dart';
 import '../networking/network/base_consumer.dart';
 
@@ -45,57 +44,60 @@ Future<void> setupGetIt() async {
   getIt.registerFactory<AppCubit>(() => AppCubit());
 
   ///!MARK: FOR Auth  ///
-  getIt.registerFactory<AuthCubit>(
-          () => AuthCubit(getIt<AuthRepo>()));
+  getIt.registerFactory<AuthCubit>(() => AuthCubit(getIt<AuthRepo>()));
   getIt.registerLazySingleton<AuthRepo>(() => AuthApiServices());
 
   ///!MARK: FOR BudgetManagement  ///
   getIt.registerFactory<BudgetManagementCubit>(
-          () => BudgetManagementCubit(getIt<BudgetManagementRepo>()));
-  getIt.registerLazySingleton<BudgetManagementRepo>(() => BudgetManagementApiServices());
+    () => BudgetManagementCubit(getIt<BudgetManagementRepo>()),
+  );
+  getIt.registerLazySingleton<BudgetManagementRepo>(
+    () => BudgetManagementApiServices(),
+  );
 
   ///!MARK: FOR Savings  ///
-  getIt.registerFactory<SavingsCubit>(
-          () => SavingsCubit(getIt<SavingsRepo>()));
+  getIt.registerFactory<SavingsCubit>(() => SavingsCubit(getIt<SavingsRepo>()));
   getIt.registerLazySingleton<SavingsRepo>(() => SavingsApiServices());
 
   ///!MARK: FOR Home  ///
-  getIt.registerFactory<HomeCubit>(
-          () => HomeCubit(getIt<HomeRepo>()));
+  getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt<HomeRepo>()));
   getIt.registerLazySingleton<HomeRepo>(() => HomeApiServices());
 
   ///!MARK: FOR Transactions  ///
   getIt.registerFactory<TransactionsCubit>(
-          () => TransactionsCubit(getIt<TransactionsRepo>()));
-  getIt.registerLazySingleton<TransactionsRepo>(() => TransactionsApiServices());
+    () => TransactionsCubit(getIt<TransactionsRepo>()),
+  );
+  getIt.registerLazySingleton<TransactionsRepo>(
+    () => TransactionsApiServices(),
+  );
 
   ///!MARK: FOR Envelops  ///
   getIt.registerFactory<EnvelopsCubit>(
-          () => EnvelopsCubit(getIt<EnvelopsRepo>()));
+    () => EnvelopsCubit(getIt<EnvelopsRepo>()),
+  );
   getIt.registerLazySingleton<EnvelopsRepo>(() => EnvelopsApiServices());
 
   ///!MARK: FOR Goals  ///
-  getIt.registerFactory<GoalsCubit>(
-          () => GoalsCubit(getIt<GoalsRepo>()));
+  getIt.registerFactory<GoalsCubit>(() => GoalsCubit(getIt<GoalsRepo>()));
   getIt.registerLazySingleton<GoalsRepo>(() => GoalsApiServices());
 
   ///!MARK: FOR Settings  ///
   getIt.registerFactory<SettingsCubit>(
-          () => SettingsCubit(getIt<SettingsRepo>()));
+    () => SettingsCubit(getIt<SettingsRepo>()),
+  );
   getIt.registerLazySingleton<SettingsRepo>(() => SettingsApiServices());
 
   // ///!MARK: FOR Profile  ///
   // getIt.registerFactory<ProfileCubit>(() => ProfileCubit(getIt<ProfileRepo>()));
   // getIt.registerLazySingleton<ProfileRepo>(() => ProfileApiServices());
 
-  // ///!MARK: FOR Notifications  ///
-  // getIt.registerFactory<NotificationsCubit>(
-  //   () => NotificationsCubit(getIt<NotificationsRepo>()),
-  // );
-  // getIt.registerLazySingleton<NotificationsRepo>(
-  //   () => NotificationsApiServices(),
-  // );
-
+  ///!MARK: FOR Notifications  ///
+  getIt.registerFactory<NotificationsCubit>(
+    () => NotificationsCubit(getIt<NotificationsRepo>()),
+  );
+  getIt.registerLazySingleton<NotificationsRepo>(
+    () => NotificationsApiServices(),
+  );
 }
 
 // void injectFCMToken(String? fcmToken) {

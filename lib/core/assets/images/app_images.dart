@@ -122,6 +122,10 @@ class Assets {
   /// assets/images/svg/menu.svg
   static const String imagesSvgMenu = "assets/images/svg/menu.svg";
 
+  /// Assets for imagesSvgNoNotificationsIcon
+  /// assets/images/svg/no_notifications_icon.svg
+  static const String imagesSvgNoNotificationsIcon = "assets/images/svg/no_notifications_icon.svg";
+
   /// Assets for imagesSvgNotificationIcon
   /// assets/images/svg/notification_icon.svg
   static const String imagesSvgNotificationIcon = "assets/images/svg/notification_icon.svg";

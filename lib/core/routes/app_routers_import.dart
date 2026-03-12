@@ -14,4 +14,5 @@ class AppRoute {
   static const String privacyView = '/PrivacyView';
   static const String editEnvelopScreen = '/EditEnvelopScreen';
   static const String goalDetailsView = '/GoalDetailsView';
+  static const String notificationsView = '/NotificationsView';
 }

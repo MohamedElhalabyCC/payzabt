@@ -110,6 +110,7 @@
   "repeatDescription": "This will be added automatically every month.",
   "deleteTransactionConfirmation": "Are you sure you want to delete this Transaction?",
   "food": "Food",
+  "noNotificationsSubtitle": "You're all caught up! We'll notify you when something new arrives.",
   "incomeUnderstandingTip": "This helps us understand your earning capacity and suggest appropriate budgets.",
   "fuel": "Fuel",
   "health": "Health",
