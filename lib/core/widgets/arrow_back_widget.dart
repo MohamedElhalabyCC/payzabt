@@ -15,9 +15,6 @@ class ArrowBackWidget extends StatelessWidget {
             context.pop();
           },
       child: Container(
-        height: 32.h,
-        width: 32.w,
-        padding: EdgeInsets.all(6.w),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8.r),
           color: Colors.transparent,

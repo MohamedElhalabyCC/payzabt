@@ -7,7 +7,9 @@ import 'package:payzabt/features/profile/data/repo/profile_repo.dart';
 class ProfileApiServices extends ProfileRepo {
   @override
   Future<Result<SuccessModel>> getProfileData() async {
-    final data = {"per_page": 5};
+    final data = {
+      "per_page": 5,
+    };
     return await networkCall<SuccessModel>(
       method: ServerMethods.GET,
       path: ProfileApiConstants.getProfileData,

@@ -15,4 +15,7 @@ class AppRoute {
   static const String editEnvelopScreen = '/EditEnvelopScreen';
   static const String goalDetailsView = '/GoalDetailsView';
   static const String notificationsView = '/NotificationsView';
+  static const String profileView = '/ProfileView';
+  static const String editProfileView = '/EditProfileView';
+  static const String fAQScreen = '/FAQScreen';
 }

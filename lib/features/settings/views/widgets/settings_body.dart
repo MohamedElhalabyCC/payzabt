@@ -222,6 +222,7 @@ class ProfileSection extends StatelessWidget {
               spreadRadius: 6,
             ),
           ],
+          onTap: ()=>context.pushNamed(AppRoute.profileView),
           child: ListTile(
             visualDensity: VisualDensity(horizontal: -4, vertical: -2),
             contentPadding: EdgeInsets.symmetric(

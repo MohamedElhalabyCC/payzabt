@@ -7,14 +7,14 @@ import '../../config/export/export.dart';
 
 class CustomTextField extends StatefulWidget {
   final String? labelText;
-  final TextStyle? labelStyle;
+  final TextStyle? labelStyle, style;
   final TextStyle? hintStyle;
   final String? hintText;
   final Widget? prefixIcon;
   final bool? enabled;
   final List<BoxShadow>? boxShadow;
 
-  final double? tPadding, bPadding, lPadding, rPadding, borderRadius,height;
+  final double? tPadding, bPadding, lPadding, rPadding, borderRadius, height;
   final TextAlign? textAlign;
   final FocusNode? focusNode;
   final AutovalidateMode? autovalidateMode;
@@ -23,7 +23,13 @@ class CustomTextField extends StatefulWidget {
   final TextStyle? floatingLabelStyle;
   final Widget? suffixIcon;
   final bool? obscureText;
-  final Color? enabledColor, cursorColor, fillColor, focusColor,titleColor,hintColor;
+  final bool? isMust;
+  final Color? enabledColor,
+      cursorColor,
+      fillColor,
+      focusColor,
+      titleColor,
+      hintColor;
   final List<String>? autofillHints;
   final TextInputType? keyboardType;
   final bool? autoCorrect, isFill, showCounter;
@@ -102,7 +108,12 @@ class CustomTextField extends StatefulWidget {
     this.onCountryChanged,
     this.onEditingComplete,
     this.onTapOutside,
-    this.initvalue = '', this.hintColor, this.boxShadow, this.height,
+    this.initvalue = '',
+    this.hintColor,
+    this.boxShadow,
+    this.height,
+    this.isMust = false,
+    this.style,
   });
 
   @override
@@ -129,16 +140,25 @@ class _CustomTextFieldState extends State<CustomTextField> {
             Row(
               children: [
                 if (widget.title != null) ...[
-                  Expanded(
-                    child: Text(
-                      widget.title!,
+                  Text(
+                    widget.title!,
+                    style: TextStyle(
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.w400,
+                      color: widget.titleColor ?? AppColors.lightSecondary,
+                    ),
+                  ),
+                  if (widget.isMust==true) ...[
+                    4.sizeBoxW,
+                    Text(
+                      "*",
                       style: TextStyle(
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
-                        color: widget.titleColor??AppColors.lightSecondary,
+                        color: Color(0xffFB2C36),
                       ),
                     ),
-                  ),
+                  ],
                 ],
               ],
             ),
@@ -190,14 +210,13 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 Expanded(
                   child: Container(
                     height: widget.height,
-                    decoration: BoxDecoration(
-                      boxShadow: widget.boxShadow,
-                    ),
+                    decoration: BoxDecoration(boxShadow: widget.boxShadow),
                     child: TextFormField(
                       onEditingComplete: widget.onEditingComplete,
                       onFieldSubmitted: widget.onFieldSubmitted,
                       textAlign: widget.textAlign ?? TextAlign.start,
                       focusNode: widget.focusNode,
+                      style: widget.style,
                       validator:
                           widget.validator ??
                           (value) {
@@ -240,7 +259,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
                             widget.hintStyle ??
                             TextStyles.styleParagraphRegular14(
                               context,
-                              color: widget.hintColor??Colors.black26.withValues(alpha: 0.5),
+                              color:
+                                  widget.hintColor ??
+                                  Colors.black26.withValues(alpha: 0.5),
                             ),
                         hintMaxLines: widget.hintMaxLine ?? 500,
                         floatingLabelStyle:
@@ -321,7 +342,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
                                   widget.borderRadius ?? 10.r,
                                 ),
                                 borderSide: BorderSide(
-                                  color: widget.enabledColor ?? Color(0xffD8DADC),
+                                  color:
+                                      widget.enabledColor ?? Color(0xffD8DADC),
                                 ),
                               ),
                         disabledBorder: OutlineInputBorder(
@@ -346,7 +368,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
                                   widget.borderRadius ?? 10.r,
                                 ),
                                 borderSide: BorderSide(
-                                  color: widget.enabledColor ?? Color(0xffD8DADC),
+                                  color:
+                                      widget.enabledColor ?? Color(0xffD8DADC),
                                 ),
                               ),
                         counterText: widget.showCounter == true ? null : "",

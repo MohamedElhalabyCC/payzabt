@@ -1,5 +1,4 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:payzabt/core/widgets/arrow_back_widget.dart';
 import 'package:payzabt/features/envelops/views/widgets/create_envelop_body.dart';
 import 'package:payzabt/features/envelops/views/widgets/on_track_envelops_body.dart';
 
@@ -31,39 +30,31 @@ class _EnvelopsScreenState extends State<EnvelopsScreen> {
             width: double.infinity,
             decoration: BoxDecoration(gradient: AppColors.appGradient),
           ),
-
           SafeArea(
+            bottom: false,
             child: Column(
               children: [
-                Stack(
-                  children: [
-                    Align(
-                      alignment: AlignmentDirectional.topStart,
-                      child: const ArrowBackWidget(),
-                    ),
-                    Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Column(
-                        children: [
-                          AppText(
-                            text: LocaleKeys.envelopes.tr(),
-                            appTextStyle: TextStyles.styleParagraphRegular16(
-                              context,
-                              color: AppColors.textWhite,
-                            ).copyWith(fontWeight: FontWeight.w500),
-                          ),
-                          AppText(
-                            text: LocaleKeys.setLimits.tr(),
-                            appTextStyle: TextStyles.styleParagraphRegular12(
-                              context,
-                              color: AppColors.textWhite,
-                            ),
-                          ),
-                        ],
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Column(
+                    children: [
+                      AppText(
+                        text: LocaleKeys.envelopes.tr(),
+                        appTextStyle: TextStyles.styleParagraphRegular16(
+                          context,
+                          color: AppColors.textWhite,
+                        ).copyWith(fontWeight: FontWeight.w500),
                       ),
-                    ),
-                  ],
-                ).paddingSymmetric(horizontal: 16, vertical: 8),
+                      AppText(
+                        text: LocaleKeys.setLimits.tr(),
+                        appTextStyle: TextStyles.styleParagraphRegular12(
+                          context,
+                          color: AppColors.textWhite,
+                        ),
+                      ),
+                    ],
+                  ),
+                ).paddingSymmetric(horizontal: 16, vertical: 12),
                 Expanded(
                   child: Container(
                     width: double.infinity,

@@ -21,7 +21,7 @@ class HomeBody extends StatelessWidget {
         ),
         12.sizeBoxH,
         ListView.builder(
-          itemCount: 1,
+          itemCount: 2,
           padding: EdgeInsets.zero,
           shrinkWrap: true,
           physics: NeverScrollableScrollPhysics(),
@@ -32,7 +32,7 @@ class HomeBody extends StatelessWidget {
             cost: "500",
           ).paddingOnly(bottom: 16.h),
         ),
-        60.sizeBoxH,
+        90.sizeBoxH,
       ],
     );
   }

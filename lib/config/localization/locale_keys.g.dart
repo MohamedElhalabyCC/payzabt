@@ -164,6 +164,9 @@ abstract class  LocaleKeys {
   static const createGoal = 'createGoal';
   static const goalDetails = 'goalDetails';
   static const remaining = 'remaining';
+  static const activeStatus = 'activeStatus';
+  static const editProfileInformation = 'editProfileInformation';
+  static const emailCannotChanged = 'emailCannotChanged';
   static const settings = 'settings';
   static const goalDeleted = 'goalDeleted';
   static const deleteGoalConfirmation = 'deleteGoalConfirmation';
@@ -174,6 +177,8 @@ abstract class  LocaleKeys {
   static const savingsHistory = 'savingsHistory';
   static const changeIncome = 'changeIncome';
   static const noNotificationsSubtitle = 'noNotificationsSubtitle';
+  static const phoneNumber = 'phoneNumber';
+  static const emailAddress = 'emailAddress';
   static const allocateToGoal = 'allocateToGoal';
   static const editSavings = 'editSavings';
   static const editTotalSavings = 'editTotalSavings';

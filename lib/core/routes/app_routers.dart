@@ -8,6 +8,8 @@ import 'package:payzabt/features/envelops/views/edit_envelop_view.dart';
 import 'package:payzabt/features/goals/logic/goals_cubit.dart';
 import 'package:payzabt/features/notifications/views/notifications_view.dart';
 import 'package:payzabt/features/onboarding/views/onboarding_view.dart';
+import 'package:payzabt/features/profile/views/edit_profile_view.dart';
+import 'package:payzabt/features/profile/views/profile_view.dart';
 import 'package:payzabt/features/savings/views/savings_view.dart';
 import 'package:payzabt/features/splash/splash_view.dart';
 import 'package:payzabt/features/transactions/views/add_transactions_view.dart';
@@ -15,6 +17,7 @@ import 'package:payzabt/features/transactions/views/transactions_view.dart';
 
 import '../../config/export/export.dart';
 import '../../features/goals/views/goal_details_view.dart';
+import '../../features/settings/views/help_center_view.dart';
 
 class AppRouter {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
@@ -114,6 +117,27 @@ class AppRouter {
             create: (context) => getIt<NotificationsCubit>(),
             child: NotificationsView(),
           ),
+        );
+
+      case AppRoute.profileView:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<ProfileCubit>(),
+            child: ProfileView(),
+          ),
+        );
+
+      case AppRoute.editProfileView:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<ProfileCubit>(),
+            child: EditProfileView(),
+          ),
+        );
+
+      case AppRoute.fAQScreen:
+        return MaterialPageRoute(
+          builder: (_) => FAQScreen(),
         );
 
       case AppRoute.bottomNavBarScreen:

@@ -87,9 +87,10 @@ Future<void> setupGetIt() async {
   );
   getIt.registerLazySingleton<SettingsRepo>(() => SettingsApiServices());
 
-  // ///!MARK: FOR Profile  ///
-  // getIt.registerFactory<ProfileCubit>(() => ProfileCubit(getIt<ProfileRepo>()));
-  // getIt.registerLazySingleton<ProfileRepo>(() => ProfileApiServices());
+  ///!MARK: FOR Profile  ///
+  getIt.registerFactory<ProfileCubit>(
+          () => ProfileCubit(getIt<ProfileRepo>()));
+  getIt.registerLazySingleton<ProfileRepo>(() => ProfileApiServices());
 
   ///!MARK: FOR Notifications  ///
   getIt.registerFactory<NotificationsCubit>(

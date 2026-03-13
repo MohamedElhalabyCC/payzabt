@@ -1,14 +1,10 @@
-import 'package:payzabt/config/export/export.dart';
+import 'package:flutter/material.dart';
 
 class ProfileBody extends StatelessWidget {
   const ProfileBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [],
-      ),
-    );
+    return const Column(children: []);
   }
 }
