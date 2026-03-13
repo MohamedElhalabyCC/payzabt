@@ -20,4 +20,6 @@ class AppRoute {
   static const String fAQScreen = '/FAQScreen';
   static const String privacyScreen = '/PrivacyScreen';
   static const String monthReviewScreen = '/MonthReviewScreen';
+  static const String rolloverCompleteScreen = '/RolloverCompleteScreen';
+  static const String insightsScreen = '/InsightsScreen';
 }

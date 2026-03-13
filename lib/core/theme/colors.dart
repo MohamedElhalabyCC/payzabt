@@ -79,8 +79,8 @@ abstract class AppColors {
   static const Color deepBlue = Color(0xFF201C59);
   static const Color mintBlue = Color(0xFFD0E3FB);
   static const LinearGradient appGradient = LinearGradient(
-    begin: Alignment(0.09, -1.00),
-    end: Alignment(-0.09, 1),
+    begin: Alignment(0, -1.00),
+    end: Alignment(0, 1),
     colors: gradientColors,
   );
   static const LinearGradient appGradient1 = LinearGradient(

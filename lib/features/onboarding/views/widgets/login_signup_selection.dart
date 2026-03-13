@@ -21,7 +21,7 @@ class LoginSignupSelection extends StatelessWidget {
         Spacer(),
         AppButton(
           title: LocaleKeys.signIn.tr(),
-          background: AppColors.textWhite,
+          background: Colors.white,
           textColor:AppColors.lightSecondary,
           onTap: ()=>context.pushNamedAndRemoveUntil(AppRoute.loginScreen),
         ),

@@ -17,6 +17,8 @@ import 'package:payzabt/features/transactions/views/add_transactions_view.dart';
 import 'package:payzabt/features/transactions/views/transactions_view.dart';
 
 import '../../config/export/export.dart';
+import '../../features/analytics_reports/views/insights_view.dart';
+import '../../features/analytics_reports/views/rollover_view.dart';
 import '../../features/goals/views/goal_details_view.dart';
 import '../../features/settings/views/help_center_view.dart';
 import '../../features/settings/views/privacy_view.dart';
@@ -147,9 +149,18 @@ class AppRouter {
           builder: (_) => MonthReviewScreen(),
         );
 
+      case AppRoute.rolloverCompleteScreen:
+        return MaterialPageRoute(
+          builder: (_) => RolloverCompleteScreen(),
+        );
+
       case AppRoute.privacyScreen:
         return MaterialPageRoute(
           builder: (_) => PrivacyScreen(),
+        );
+      case AppRoute.insightsScreen:
+        return MaterialPageRoute(
+          builder: (_) => InsightsScreen(),
         );
 
       case AppRoute.bottomNavBarScreen:

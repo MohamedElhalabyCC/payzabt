@@ -32,6 +32,7 @@ class _SettingsBodyState extends State<SettingsBody> {
                 title: LocaleKeys.analyticsReport.tr(),
                 isGradient: true,
                 icon: Assets.imagesSvgAnalysisIcon,
+                onTap: ()=>context.pushNamed(AppRoute.insightsScreen)
               ),
               Divider(color: Color(0xffF3F4F6), thickness: 1),
               _buildListTile(
