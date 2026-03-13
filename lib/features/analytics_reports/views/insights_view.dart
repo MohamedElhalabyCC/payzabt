@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -289,7 +288,7 @@ class WeeklySpendingCard extends StatelessWidget {
                     percent: data['percent'],
                     barRadius: const Radius.circular(5.0),
                     progressColor: const Color(0xff00BBA7),
-                    backgroundColor: Color(0xff030213).withValues(alpha: 0.2),
+                    backgroundColor: Color(0xffF3F4F6),
                     padding: EdgeInsets.zero,
                   ),
                 ),
@@ -423,7 +422,6 @@ class CategoryTrendCard extends StatelessWidget {
   }
 }
 
-// Global helper for card styling
 BoxDecoration _cardDecoration() {
   return BoxDecoration(
     color: Colors.white,
