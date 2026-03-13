@@ -3,55 +3,11 @@ import 'package:easy_localization/easy_localization.dart';
 import '../../../config/export/export.dart';
 import '../../../core/widgets/arrow_back_widget.dart';
 
-class FAQScreen extends StatelessWidget {
-  const FAQScreen({super.key});
+class PrivacyScreen extends StatelessWidget {
+  const PrivacyScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<Map<String, String>> faqData = [
-      {
-        "q": "How do I create a new envelope?",
-        "a": "Navigate to the Envelopes tab and tap the '+' button...",
-      },
-      {
-        "q": "What happens to leftover money at the end of the month?",
-        "a":
-            "You can choose to roll it over to next month or move it to savings.",
-      },
-      {
-        "q": "How do I set up a financial goal?",
-        "a": "Go to the Goals section and enter your target amount and name.",
-      },
-      {
-        "q": "Can I change my monthly budget mid-month?",
-        "a": "Yes, go to settings and update your budget amount anytime.",
-      },
-      {
-        "q": "How does the salary day setting work?",
-        "a":
-            "Set the day you get paid, and your budget will reset automatically on that day.",
-      },
-      {
-        "q": "What are insights and how do they help?",
-        "a": "Insights analyze your spending patterns to help you save more.",
-      },
-      {
-        "q": "How do I add an expense?",
-        "a": "Insights analyze your spending patterns to help you save more.",
-      },
-      {
-        "q": "Can I delete an envelope or goal?",
-        "a": "Insights analyze your spending patterns to help you save more.",
-      },
-      {
-        "q": "Is my financial data secure?",
-        "a": "Insights analyze your spending patterns to help you save more.",
-      },
-      {
-        "q": "How do I reset my password?",
-        "a": "Insights analyze your spending patterns to help you save more.",
-      },
-    ];
     return AppScaffold(
       horizontalPadding: 0,
       verticalPadding: 0,
@@ -77,7 +33,7 @@ class FAQScreen extends StatelessWidget {
                       Align(
                         alignment: Alignment.topCenter,
                         child: AppText(
-                          text: LocaleKeys.helpCenter.tr(),
+                          text: LocaleKeys.privacyAndPolicy.tr(),
                           appTextStyle: TextStyles.styleParagraphRegular16(
                             context,
                             color: AppColors.textWhite,
@@ -94,7 +50,7 @@ class FAQScreen extends StatelessWidget {
                       shape: BoxShape.circle,
                     ),
                     child: AppImageView(
-                      Assets.imagesSvgHelpCenterIcon,
+                      Assets.imagesSvgPrivacyIcon,
                       height: 40.h,
                       width: 40.w,
                       color: Colors.white,
@@ -102,15 +58,7 @@ class FAQScreen extends StatelessWidget {
                   ),
                   14.sizeBoxH,
                   AppText(
-                    text: LocaleKeys.howCanWeHelpYou.tr(),
-                    appTextStyle: TextStyles.styleParagraphRegular24(
-                      context,
-                      color: AppColors.textWhite,
-                    ),
-                  ),
-                  8.sizeBoxH,
-                  AppText(
-                    text: LocaleKeys.helpCenterDescription.tr(),
+                    text: LocaleKeys.privacyPolicyDescription.tr(),
                     textAlign: TextAlign.center,
                     appTextStyle: TextStyles.styleParagraphRegular14(
                       context,
@@ -128,30 +76,92 @@ class FAQScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   16.sizeBoxH,
-                  AppText(
-                    text: LocaleKeys.frequentlyAskedQuestions.tr(),
-                    appTextStyle: TextStyles.styleParagraphRegular16(
-                      context,
-                      color: AppColors.textBlack,
-                    ).copyWith(fontSize: 18),
-                  ).paddingSymmetric(horizontal: 20.w),
-                  8.sizeBoxH,
-
-                  ListView.builder(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 10,
+                  AppMainContainer(
+                    vPadding: 16.h,
+                    hPadding: 26.w,
+                    width: double.infinity,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color(0x4C000000),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0,
+                      ),
+                      BoxShadow(
+                        color: Color(0x26000000),
+                        blurRadius: 12,
+                        offset: Offset(0, 8),
+                        spreadRadius: 6,
+                      ),
+                    ],
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        6.sizeBoxH,
+                        AppText(
+                          text: LocaleKeys.privacyAndPolicy.tr(),
+                          appTextStyle: TextStyles.styleParagraphRegular16(
+                            context,
+                          ).copyWith(fontSize: 18,fontFamily: "Arimo"),
+                        ),
+                        12.sizeBoxH,
+                        AppText(
+                          text: LocaleKeys.privacyPolicyIntro.tr(),
+                          appTextStyle: TextStyles.styleParagraphRegular14(
+                            context,
+                            color: AppColors.textGreyed
+                          ).copyWith(fontSize: 18,fontFamily: "Arimo"),
+                        ),
+                      ],
                     ),
-                    itemCount: faqData.length,
-                    physics: const NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemBuilder: (context, index) {
-                      return FAQTile(
-                        question: faqData[index]['q']!,
-                        answer: faqData[index]['a']!,
-                      );
-                    },
-                  ),
+                  ).paddingHorizontalOnly(24.w),
+                  30.sizeBoxH,
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 14.h),
+                    decoration: BoxDecoration(
+                      color: Color(0xFFF0FDFA),
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(width: 1.35, color: Color(0xFF95F6E4)),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        6.sizeBoxH,
+                        AppText(
+                          text: LocaleKeys.privacyQuestionsTitle.tr(),
+                          appTextStyle: TextStyles.styleParagraphRegular16(
+                            context,
+                            color: const Color(0xff0B4F4A)
+                          ),
+                        ),
+                        12.sizeBoxH,
+                        AppText(
+                          text: LocaleKeys.privacyPolicyContactNote.tr(),
+                          appTextStyle: TextStyles.styleParagraphRegular14(
+                            context,
+                            color: const Color(0xff00786F)
+                          ),
+                        ),
+                        12.sizeBoxH,
+                        AppText(
+                          text: "${LocaleKeys.emailLabel.tr()} privacy@payright.app",
+                          appTextStyle: TextStyles.styleParagraphRegular14(
+                            context,
+                            color: const Color(0xff005F5A)
+                          ),
+                        ),
+                        12.sizeBoxH,
+                        AppText(
+                          text: "${LocaleKeys.supportLabel.tr()} help@payright.app",
+                          appTextStyle: TextStyles.styleParagraphRegular14(
+                            context,
+                            color: const Color(0xff005F5A)
+                          ),
+                        ),
+                      ],
+                    ),
+                  ).paddingHorizontalOnly(24.w)
                 ],
               ),
             ),

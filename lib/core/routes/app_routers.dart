@@ -18,6 +18,7 @@ import 'package:payzabt/features/transactions/views/transactions_view.dart';
 import '../../config/export/export.dart';
 import '../../features/goals/views/goal_details_view.dart';
 import '../../features/settings/views/help_center_view.dart';
+import '../../features/settings/views/privacy_view.dart';
 
 class AppRouter {
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
@@ -138,6 +139,11 @@ class AppRouter {
       case AppRoute.fAQScreen:
         return MaterialPageRoute(
           builder: (_) => FAQScreen(),
+        );
+
+      case AppRoute.privacyScreen:
+        return MaterialPageRoute(
+          builder: (_) => PrivacyScreen(),
         );
 
       case AppRoute.bottomNavBarScreen:

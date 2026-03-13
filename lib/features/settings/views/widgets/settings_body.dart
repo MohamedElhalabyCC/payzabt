@@ -75,10 +75,12 @@ class _SettingsBodyState extends State<SettingsBody> {
                 context,
                 title: LocaleKeys.helpCenter.tr(),
                 icon: Assets.imagesSvgHelpCenterIcon,
+                onTap: ()=>context.pushNamed(AppRoute.fAQScreen)
               ),
               Divider(color: Color(0xffF3F4F6), thickness: 1),
               _buildListTile(
                 context,
+                onTap: ()=>context.pushNamed(AppRoute.privacyScreen),
                 title: LocaleKeys.privacyPolicy.tr(),
                 icon: Assets.imagesSvgPrivacyIcon,
               ),

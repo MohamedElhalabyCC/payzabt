@@ -169,6 +169,16 @@ abstract class  LocaleKeys {
   static const emailCannotChanged = 'emailCannotChanged';
   static const settings = 'settings';
   static const goalDeleted = 'goalDeleted';
+  static const privacyPolicyIntro = 'privacyPolicyIntro';
+  static const privacyPolicyContactNote = 'privacyPolicyContactNote';
+  static const privacyQuestionsTitle = 'privacyQuestionsTitle';
+  static const emailLabel = 'emailLabel';
+  static const supportLabel = 'supportLabel';
+  static const privacyPolicyDescription = 'privacyPolicyDescription';
+  static const privacyAndPolicy = 'privacyAndPolicy';
+  static const frequentlyAskedQuestions = 'frequentlyAskedQuestions';
+  static const howCanWeHelpYou = 'howCanWeHelpYou';
+  static const helpCenterDescription = 'helpCenterDescription';
   static const deleteGoalConfirmation = 'deleteGoalConfirmation';
   static const totalSavedTowardGoals = 'totalSavedTowardGoals';
   static const inProgress = 'inProgress';
