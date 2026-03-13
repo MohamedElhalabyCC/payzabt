@@ -19,4 +19,5 @@ class AppRoute {
   static const String editProfileView = '/EditProfileView';
   static const String fAQScreen = '/FAQScreen';
   static const String privacyScreen = '/PrivacyScreen';
+  static const String monthReviewScreen = '/MonthReviewScreen';
 }

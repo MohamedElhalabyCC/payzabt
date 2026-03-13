@@ -1,3 +1,4 @@
+import 'package:payzabt/features/analytics_reports/views/month_review_view.dart';
 import 'package:payzabt/features/auth/views/forget_password_view.dart';
 import 'package:payzabt/features/auth/views/login_view.dart';
 import 'package:payzabt/features/auth/views/otp_view.dart';
@@ -139,6 +140,11 @@ class AppRouter {
       case AppRoute.fAQScreen:
         return MaterialPageRoute(
           builder: (_) => FAQScreen(),
+        );
+
+      case AppRoute.monthReviewScreen:
+        return MaterialPageRoute(
+          builder: (_) => MonthReviewScreen(),
         );
 
       case AppRoute.privacyScreen:

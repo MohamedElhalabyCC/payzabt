@@ -75,3 +75,6 @@ export 'package:payzabt/features/goals/logic/goals_cubit.dart';
 export 'package:payzabt/features/settings/data/api/settings_api_services.dart';
 export 'package:payzabt/features/settings/data/repo/settings_repo.dart';
 export 'package:payzabt/features/settings/logic/settings_cubit.dart';
+export 'package:payzabt/features/analytics_reports/data/api/analytics_reports_api_services.dart';
+export 'package:payzabt/features/analytics_reports/data/repo/analytics_reports_repo.dart';
+export 'package:payzabt/features/analytics_reports/logic/analytics_reports_cubit.dart';

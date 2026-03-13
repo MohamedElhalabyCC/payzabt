@@ -87,6 +87,7 @@ class _SettingsBodyState extends State<SettingsBody> {
               Divider(color: Color(0xffF3F4F6), thickness: 1),
               _buildListTile(
                 context,
+                onTap: ()=>context.pushNamed(AppRoute.monthReviewScreen),
                 title: LocaleKeys.termsOfService.tr(),
                 icon: Assets.imagesSvgTermsIcon,
               ),

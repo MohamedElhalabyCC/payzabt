@@ -2,12 +2,12 @@ import 'dart:developer';
 import 'dart:io';
 
 final String _capitalName =
-    'Profile'; // like Home, Profile, OrderHistory, etc.
+    'AnalyticsReports'; // like Home, Profile, OrderHistory, etc.
 
 final String _lowerName =
-    'profile'; // like home, profile, orderHistory, etc.
+    'analyticsReports'; // like home, profile, orderHistory, etc.
 final String _lowerNamePath =
-    'profile'; // like home, profile, order_history, etc. (used for file paths)
+    'analytics_reports'; // like home, profile, order_history, etc. (used for file paths)
 final String _appName = 'payzabt';
 
 void main() async {

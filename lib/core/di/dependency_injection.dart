@@ -99,6 +99,11 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<NotificationsRepo>(
     () => NotificationsApiServices(),
   );
+
+  ///!MARK: FOR AnalyticsReports  ///
+  getIt.registerFactory<AnalyticsReportsCubit>(
+          () => AnalyticsReportsCubit(getIt<AnalyticsReportsRepo>()));
+  getIt.registerLazySingleton<AnalyticsReportsRepo>(() => AnalyticsReportsApiServices());
 }
 
 // void injectFCMToken(String? fcmToken) {
