@@ -79,27 +79,37 @@ class InsightsScreen extends StatelessWidget {
                   const SizedBox(height: 24),
                   Text(
                     LocaleKeys.weeklySpending.tr(),
-                    style: TextStyles.styleParagraphRegular16(
-                      context,
-                    ),
+                    style: TextStyles.styleParagraphRegular16(context),
                   ),
                   const SizedBox(height: 12),
                   WeeklySpendingCard(
                     weeklyData: [
-                      {"label": "${LocaleKeys.week.tr()} 1", "amount": "5,000", "percent": 0.4},
-                      {"label": "${LocaleKeys.week.tr()} 2", "amount": "7,000", "percent": 0.55},
-                      {"label": "${LocaleKeys.week.tr()} 3", "amount": "10,000", "percent": 0.8},
-                      {"label": "${LocaleKeys.week.tr()} 4", "amount": "12,000", "percent": 0.95},
+                      {
+                        "label": "${LocaleKeys.week.tr()} 1",
+                        "amount": "5,000",
+                        "percent": 0.4,
+                      },
+                      {
+                        "label": "${LocaleKeys.week.tr()} 2",
+                        "amount": "7,000",
+                        "percent": 0.55,
+                      },
+                      {
+                        "label": "${LocaleKeys.week.tr()} 3",
+                        "amount": "10,000",
+                        "percent": 0.8,
+                      },
+                      {
+                        "label": "${LocaleKeys.week.tr()} 4",
+                        "amount": "12,000",
+                        "percent": 0.95,
+                      },
                     ],
                   ),
                   const SizedBox(height: 24),
-                  const Text(
-                    "Category Trends",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: Color(0xFF344054),
-                    ),
+                  Text(
+                    LocaleKeys.categoryTrends.tr(),
+                    style: TextStyles.styleParagraphRegular16(context),
                   ),
                   const SizedBox(height: 12),
                   CategoryTrendCard(
@@ -113,7 +123,7 @@ class InsightsScreen extends StatelessWidget {
                         "Your food spending increased by 19% compared to last month.",
                   ),
                   const SizedBox(height: 16),
-                   CategoryTrendCard(
+                  CategoryTrendCard(
                     category: "Shopping",
                     amount: "8,500",
                     trend: "8%",
@@ -186,9 +196,12 @@ class SpendingSummaryCard extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-               Text(
+              Text(
                 LocaleKeys.totalSpent.tr(),
-                style: TextStyles.styleParagraphRegular14(context,color:AppColors.subText,),
+                style: TextStyles.styleParagraphRegular14(
+                  context,
+                  color: AppColors.subText,
+                ),
               ),
               const SizedBox(height: 4),
               Text(
@@ -199,7 +212,10 @@ class SpendingSummaryCard extends StatelessWidget {
               ),
               Text(
                 LocaleKeys.egp.tr(),
-                style:  TextStyles.styleParagraphRegular14(context,color:AppColors.subText,),
+                style: TextStyles.styleParagraphRegular14(
+                  context,
+                  color: AppColors.subText,
+                ),
               ),
             ],
           ),
@@ -208,7 +224,10 @@ class SpendingSummaryCard extends StatelessWidget {
             children: [
               Text(
                 LocaleKeys.vsLastMonth.tr(),
-                style:  TextStyles.styleParagraphRegular14(context,color:AppColors.subText,),
+                style: TextStyles.styleParagraphRegular14(
+                  context,
+                  color: AppColors.subText,
+                ),
               ),
               const SizedBox(height: 8),
               Row(
@@ -244,7 +263,7 @@ class WeeklySpendingCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(right: 20,left: 20,top: 24,bottom: 14),
+      padding: const EdgeInsets.only(right: 20, left: 20, top: 24, bottom: 14),
       decoration: _cardDecoration(),
       child: Column(
         children: weeklyData.map((data) {
@@ -257,7 +276,7 @@ class WeeklySpendingCard extends StatelessWidget {
                   data['label'],
                   style: TextStyles.styleParagraphRegular14(
                     context,
-                    color:AppColors.textGreyed,
+                    color: AppColors.textGreyed,
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -272,7 +291,7 @@ class WeeklySpendingCard extends StatelessWidget {
                     progressColor: const Color(0xff00BBA7),
                     backgroundColor: Color(0xff030213).withValues(alpha: 0.2),
                     padding: EdgeInsets.zero,
-                  )
+                  ),
                 ),
                 const SizedBox(height: 8),
                 Align(
@@ -333,7 +352,12 @@ class CategoryTrendCard extends StatelessWidget {
                   color: iconColor.withValues(alpha: 0.2),
                   shape: BoxShape.circle,
                 ),
-                child: AppImageView(icon, color: iconColor,height:26.h ,width: 26.w,),
+                child: AppImageView(
+                  icon,
+                  color: iconColor,
+                  height: 26.h,
+                  width: 26.w,
+                ),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -343,7 +367,7 @@ class CategoryTrendCard extends StatelessWidget {
                     Text(
                       category,
                       style: TextStyles.styleParagraphRegular16(
-                        context
+                        context,
                       ).copyWith(fontFamily: "Arimo"),
                     ),
                     Text(
